@@ -79,7 +79,7 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
 
 1. At the next phase of the wizard, **Check latest updates and register appliance**, paste the **Azure Migrate project key (1)** that you copied from the Azure portal earlier and select **Verify (2)** to verify the Azure Migrate project key.
 
-    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project.](Images/azmigrate-04.1.png "Register with Azure Migrate")
+    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project.](Images/module1-exercise1-01.png "Register with Azure Migrate")
 
 1. **Wait** for some time while the wizard installs the latest Azure Migrate updates. If prompted for credentials, enter username **Administrator** and password **<inject key="SmartHotel Admin Password" />**. Once the Azure Migrate updates are completed, you may see a pop-up if the management app restart is required, and if so, select **Refresh** to restart the app.  
 
@@ -93,25 +93,32 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
     
 1. At first, you will be presented with a **Continue with Azure login** pop-up. On the **Continue with Azure login** pop-up dialog, click on **Copy code & Login**.
    
-     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/azmigrate-05.png "Azure Migrate login code")
+     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the login code for the Azure Migrate project.](Images/module1-exercise1-03.png "Azure Migrate login code")
   
 1. This will open an Azure login prompt in a new browser tab (if it doesn't appear, make sure the pop-up blocker in the browser is disabled). Paste the **code (1)** and click on **Next (2)**. You will then be asked for your Azure portal credentials to complete the login process.
 
-     ![Screenshot of the Azure Migrate appliance login window, showing where to copy and paste the login code for the Azure Migrate project.](Images/azmigrate-06.png "Azure Migrate Microsoft login")
+     ![Screenshot of the Azure Migrate appliance login window, showing where to copy and paste the login code for the Azure Migrate project.](Images/module1-exercise1-04.png "Azure Migrate Microsoft login")
 
-1. Login using the below Azure credentials and select **Continue** on the **Are you trying to sign in to Microsoft Azure PowerShell?** window to complete the login process. Once you have logged in, return to the Azure Migrate Appliance tab and the appliance registration will start automatically and display the below message once the registration is successful.
+1. Login using the below Azure credentials and select **Continue** on the **Are you trying to sign in to Microsoft Azure PowerShell?** window to complete the login process.
     
-     * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
+     * Azure Username/Email: <inject key="AzureAdUserEmail"></inject>  **(1)** and click on **Next** **(2)**
+
+       ![Screenshot of the Are you trying to sign in to Microsoft Azure PowerShell?.](Images/module1-exercise1-05.png "login email")
      
-     * Azure Password: <inject key="AzureAdUserPassword"></inject> 
+     * Azure Password: <inject key="AzureAdUserPassword"></inject> **(3)** and click on **Sign in** **(4)**
 
-       ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project as completed.](Images/registrdsfdvd.png "Appliance registered")
+       ![Screenshot of the Screenshot of the Are you trying to sign in to Microsoft Azure PowerShell?](Images/module1-exercise1-06.png "login password")  
 
-       Once the registration has been completed, you can proceed to the next panel, **Manage credentials and discovery sources**.
+2. Once you have logged in, return to the Azure Migrate Appliance tab and the appliance registration will start automatically and display the below message once the registration is successful.
+  
+
+    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project as completed.](Images/module1-exercise1-08.png "Appliance registered")
+
+   Once the registration has been completed, you can proceed to the next panel, **Manage credentials and discovery sources**.
 
 1. In **Step 1: Provide Hyper-V host credentials for the discovery of Hyper-V VMs** under **2. Manage credentials and discovery sources**, select **Add credentials**.
 
-    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add credentials' button.](Images/addcredsss.png)
+    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add credentials' button.](Images/module1-exercise1-07.png)
 
 1. Specify the following details on the **Add credentials** blade for the Hyper-V host/cluster that the appliance will use to discover VMs and select **Save (4)**.
  
@@ -121,13 +128,13 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
       
       3. Password: **<inject key="SmartHotelHost Admin Password" /> (3)**
 
-         ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add credentials' panel.](Images/upd-add-creds.png "Credentials")
+         ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add credentials' panel.](Images/module1-exercise1-08.png "Credentials")
 
          > **Note:** The Azure Migrate appliance may not have picked up your local keyboard mapping. Select the 'eyeball' in the password box to check that the password was entered correctly.
 
 1. In **Step 2: Provide Hyper-V host/cluster details**, select **Add discovery source** to specify the Hyper-V host/cluster IP address/FQDN and the friendly name for credentials to connect to the host/cluster.
 
-    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add discovery source' button.](Images/adddscvryyy.png "Add discovery source")
+    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add discovery source' button.](Images/module1-exercise1-12.png "Add discovery source")
 
 1. On the **Add discovery source** blade, provide the following details:
      
@@ -139,7 +146,7 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
       
       1. Select **Save (4)**.
 
-         ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add discovery source' panel.](Images/HOL1-EX1-S24.png "Discovery source - SmartHotelHost")
+         ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add discovery source' panel.](Images/module1-exercise1-09.png "Discovery source - SmartHotelHost")
 
          > **Note:** You can either **Add single item** at a time or **Add multiple items** in one go. There is also an option to provide Hyper-V host/cluster details through **Import CSV**.
 
@@ -158,9 +165,9 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
 
      > **Note:** The discovery process can take up to 10 minutes. 
    
-    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Start discovery' button.](Images/disablered1_1.png)
+    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Start discovery' button.](Images/module1-exercise1-10.png)
     
-    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Start discovery' button.](Images/startdscvry1.png)
+    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Start discovery' button.](Images/module1-exercise1-11.png)
 
 1. Wait for the Azure Migrate status to show that **Discovery has been successfully initiated**. This will take several minutes. After the discovery has been successfully initiated, you can check the discovery status against each host/cluster in the table.
 
