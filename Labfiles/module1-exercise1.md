@@ -112,7 +112,7 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
 2. Once you have logged in, return to the Azure Migrate Appliance tab and the appliance registration will start automatically and display the below message once the registration is successful.
   
 
-    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project as completed.](Images/module1-exercise1-08.png "Appliance registered")
+    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project as completed.](Images/azmigrate-06.1.png "Appliance registered")
 
    Once the registration has been completed, you can proceed to the next panel, **Manage credentials and discovery sources**.
 
@@ -138,13 +138,15 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
 
 1. On the **Add discovery source** blade, provide the following details:
      
-      1. Select **Add single item (1)**
+      1. Select **Add single item (1)**.
+  
+      2. Discovery source: **Hyper-V Host/Cluster (2)**
       
-      1. IP Address / FQDN:  Enter **HOSTVMS<inject key="DeploymentID" enableCopy="false" /> (2)** 
+      1. IP Address / FQDN:  Enter **HOSTVMS<inject key="DeploymentID" enableCopy="false" /> (3)** 
       
-      1. Friendly name: Select **hostlogin (3)** from the dropdown and 
+      1. Friendly name: Select **hostlogin (4)** from the dropdown and 
       
-      1. Select **Save (4)**.
+      1. Select **Save (5)**.
 
          ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add discovery source' panel.](Images/module1-exercise1-09.png "Discovery source - SmartHotelHost")
 
