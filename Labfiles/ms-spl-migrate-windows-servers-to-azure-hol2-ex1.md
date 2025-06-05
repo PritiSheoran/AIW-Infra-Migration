@@ -12,9 +12,9 @@ In this task, you will create a new Azure Storage Account that will be used by M
 
 > **Note:** This lab focuses on the technical tools required for workload migration. In a real-world scenario, more consideration should go into the long-term plan prior to migrating assets. The landing zone required to host VMs should also include considerations for network traffic, access control, resource organization, and governance. For example, the CAF Migration Blueprint and CAF Foundation Blueprint can be used to deploy a pre-defined landing zone and demonstrate the potential of an Infrastructure as Code (IaC) approach to infrastructure resource management. For more information, see [Azure Landing Zones](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/) and [Cloud Adoption Framework Azure Migration landing zone Blueprint sample](https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone/).
 
-1. In the Azure portal's left navigation, select **+ Create a resource**, then search for and select **Storage account**, followed by **Create**.
+1. In the Azure portal's left navigation, select **+ Create a resource**, then search for and select **Storage account (1)**, followed by **Create (2)**.
 
-    ![](Images/30052025(9).png)
+    ![Creation of storage account](Images/MigrationHA-01.png)
 
 2. In the **Create storage account** blade, on the **Basics** tab, enter or select the following values and click on **Review + create (7)**.
 
@@ -38,7 +38,7 @@ In this task, you will create a new Azure Storage Account that will be used by M
 
 4. Once the storage account is deployed, click on **Go to resource** to open it.
 
-5. Go to the **Data management (1)** section and select **Data protection (1)**. To meet the requirement for enabling replication on Virtual Machines (which does **not** support soft delete-enabled storage accounts), uncheck the boxes for **Enable soft delete for blobs (2)** and **Enable soft delete for containers (2)**. Once done, click **Save (3)** to apply the changes.
+5. Go to the **Data management** section and select **Data protection (1)**. To meet the requirement for enabling replication on Virtual Machines (which does **not** support soft delete-enabled storage accounts), uncheck the boxes for **Enable soft delete for blobs (2)** and **Enable soft delete for containers (2)**. Once done, click **Save (3)** to apply the changes.
 
    ![](Images/30052025(12).png)
 
@@ -90,19 +90,24 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
 
      ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](Images/upd-e3-t2-s4.png "Download registration key file")
 
-1. Open the **AzureSiteRecoveryProvider.exe** installer you downloaded a moment ago. On the **Microsoft Update** tab, select **Off** and select **Next**. Accept the default installation location and select **Install**.
+1. Open the **AzureSiteRecoveryProvider.exe** installer you downloaded a moment ago. On the **Microsoft Update** tab, select **Off (1)** and select **Next (2)**.
 
+   ![Screenshot of the ASR provider installer.](Images/MigrationHA-02.png "Azure Site Recovery Provider Setup")
+   
+3. Accept the default installation location and select **Install**.
     > **Note:** If you are prompted with a pop-up, like the latest version of the Provider is installed on this server. Would you like to proceed to registration? select **Yes**. (You can directly jump to the next step in that case.)
   
      ![Screenshot of the ASR provider installer.](Images/upd-asr-provider-install.png "Azure Site Recovery Provider Setup")
 
-1. When the installation has completed, select **Register**. Browse to the location of the key file you downloaded. When the key is loaded, select **Next**.
+1. When the installation has completed, select **Register**.
+   
+3. **Browse (1)** to the location of the key file you downloaded. When the key is loaded, select **Next (2)**.
 
      ![Screenshot of the ASR provider registration settings.](Images/upd-asr-registration.png "Key file registration")
 
 1. Select **Connect directly to Azure Site Recovery without a proxy server (1)** and select **Next (2)**. The registration of the Hyper-V host with Azure Site Recovery will begin.
 
-     ![Screenshot of the ASR provider registration settings.](Images/upd-e3-t2-s8.png)
+     ![Screenshot of the ASR provider registration settings.](Images/MigrationHA-03.png)
 
 1. Wait for registration to complete (this may take several minutes). Then select **Finish**.
 
@@ -126,7 +131,7 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
 
      ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Registration finalized' message.](Images/upd-discover-7.png "Registration finalized")
 
-1. The **Migration and modernization** panel should now show 7 discovered servers.
+1. The **Migration and modernization** panel should now show **7 discovered servers**.
 
      ![](Images/30052025(17).png)
 
@@ -197,7 +202,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
     - Select the OS Type as **Windows** operating system for the **smarthotelweb1**, **smarthotelweb2** virtual machines.
 
-    - Select **Next**. 
+    - Select **Next (2)**. 
 
       ![](Images/30052025(21).png)
     
@@ -213,7 +218,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
      ![](Images/30052025(23).png)
 
-1. Select **Replications (1)** under **Migration** on the left.  Select **Refresh (2)** occasionally and wait until all three machines have a **Protected (3)** status, which shows the initial replication is complete. This will take 5-10 minutes.
+1. Select **Replications (1)** under **Migration** on the left.  Select **Refresh (2)** occasionally and wait until all two machines have a **Protected (3)** status, which shows the initial replication is complete. This will take 5-10 minutes.
 
      ![Screenshot of the 'Azure Migrate: Server Migration - Replicating machines' blade showing the replication status as 'Protected' for all 3 servers.](Images/06-05-2024(4).png "Replication status")
 
