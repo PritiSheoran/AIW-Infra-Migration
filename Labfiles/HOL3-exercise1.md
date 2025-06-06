@@ -38,7 +38,7 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
    
    - Leave other values as default and Click on **Next (4)**
 
-    ![Screenshot of the resource details tab.](Images/HOL3E1S5.png "resource details tab")
+    ![Screenshot of the resource details tab.](Images/HOL3E1S5(1).png "resource details tab")
 
 1. Under the **Tags** tab, leave the values as default and click on **Next**.
 
