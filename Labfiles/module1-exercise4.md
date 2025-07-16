@@ -1,8 +1,7 @@
 
 # HOL1: Exercise 4: Optimizing newly Migrated Workloads and Emphasizing commonalities across all Stacks
 
-
-### Estimated time: 25 minutes
+### Estimated time: 25 Minutes
 
 In this exercise, you will focus on enhancing business resilience through the use of Azure Virtual Machine Scale Sets (VMSS). It involves creating and deploying a specialized virtual machine image, which is captured and stored in a gallery named "imagemigration." Additionally, a VM scale set called "migrationscaleset" is established to showcase Azure's scalability and business continuity capabilities. As part of this process, you will also enable Automanage on existing machines to streamline management and optimize performance.
 
@@ -13,37 +12,30 @@ In this exercise, you will complete the following tasks:
 - Task 1: Using VM Scale Sets to Drive Business Resiliency
 - Task 2: Azure auto manage
 
-### Task 1: Using VM Scale Sets to Drive Business Resiliency
+## Task 1: Using VM Scale Sets to Drive Business Resiliency
 
 In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to improve business resilience by creating and deploying a specialized virtual machine image. The image is captured and stored in a gallery called imagemigration, and a VM scale set named migrationscaleset is created, demonstrating Azure's scalability and business continuity capabilities.
 
-1. If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with below Azure credentials.
-    * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
-    * Azure Password: <inject key="AzureAdUserPassword"></inject>
+1. In the Azure portal's navigation pane, select **Resource groups**. From the Resource groups page, select the **SmartHotelHostRG** resource group. Select **smarthotelweb1** VM to create an image.
 
-2. In the Azure portal's navigation pane, select **Resource groups**.
+   ![](Images/15-7-25-l2-41.png)
 
-3. From the Resource groups blade, select the **SmartHotelHostRG** resource group.
 
-4. Select **smarthotelweb1** VM to create image.
-
-2. On the page for the VM, on the upper menu, select **Capture > Image**.
+1. On the **smarthotelweb1** VM page, on the upper menu, select **Capture (1) -> Image (2)**.
    
-   ![](Images/30-09-2024(8).png)
+   ![](Images/15-7-25-l4-1.png)
 
-4. To create the image in a gallery, select **Yes, share it to a gallery as an image version** under **Instance details**.
+1. On the **Create an image** page, on the **Basics** tab under the **Instance details** section, select: **Yes, share it to a gallery as a VM image version.**
 
-   ![](Images/md1-ex-4-t1-s6.png)
+   ![](Images/15-7-25-l4-l1.png)
 
-5. In **Gallery details**, create a new gallery by selecting **Create new (1)** and enter **imagemigration<inject key="DeploymentID" enableCopy="false" /> (2)** and click **Ok (3)**.
+1. In the **Gallery details** section, in the **Target Azure compute gallery**, select **Create new (1)**, enter **imagemigration<inject key="DeploymentID" enableCopy="false" /> (2)**, and then click **OK (3)** to create a new Azure compute gallery.
 
-   ![](Images/upd-e4-t1-s7.png)
+   ![](Images/15-7-25-l4-l2.png)
 
-6. In the Operating system state select **Specialized**.
-
-7. On the Target VM definition click **Create new (1)** and create a VM Image definition by providing the following details and then click **Ok (6)**: 
+1. On the **Target VM image definition**, click **Create new (1)** and create a VM Image definition by providing the following details, and then click **Ok (6)**: 
   
-   - Image VM definition name: **imagedefinition<inject key="DeploymentID" enableCopy="false" /> (2)**
+   - VM image definition name: **imagedefinition<inject key="DeploymentID" enableCopy="false" /> (2)**
 
    - Publisher: **Microsoft (3)**
     
@@ -51,29 +43,35 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
   
    - SKU: **migration (5)**
 
-   ![](Images/upd-4-t1-s9.png)
+      ![](Images/15-7-25-l4-l3.png)
 
-8. Enter an **image version** number. If this is the first version of this image, type **1.0.0**
+1. In the **Operating system state** section, select **Specialized (1)** and enter the **Version Number**. If this is the first version of the image, type **1.0.0 (2)**. Select **Review + create (3)**.
 
-9. Select **Review + create**.
+   ![](Images/15-7-25-l4-2.png)
 
-10. After validation passes, select **Create** to create the image and wait for the image creation.
+1. On the **Review + create** tab, verify that the validation has passed and all the details are correct. Then, select **Create** to begin creating the image.
 
-11. On the page for the image gallery, on the upper menu, select **+ Create VMSS**.
+    ![](Images/15-7-25-l4-l5.png)
 
-    ![](Images/upd-vmss1.png)
+1. Once the VM image version deployment is complete, click on **Go to resource**.
 
-12. Under the Basics tab, enter the **Virtual Machine name scale set** name as **migrationscaleset<inject key="DeploymentID" enableCopy="false" />**
+   ![](Images/15-7-25-l4-l6.png)
+   
+1. On the **VM image version** page, click **Create VMSS (1)** to begin creating a Virtual Machine Scale Set using this image.
 
-    ![](Images/upd-vmname.png)
+    ![](Images/15-7-25-l4-l7.png)
 
-13. Select **Standard_D2s_v3** for the **size**.
+1. On the **Create a virtual machine scale set** page, Under the Basics tab, enter the **Virtual Machine scale set name** as **migrationscaleset<inject key="DeploymentID" enableCopy="false" />**
 
-14. Select the License type as **Window server**.
+    ![](Images/15-7-25-l4-l8.png)
 
-     ![](Images/30-09-2024(9).png)
+1. On the **Size** section, select **Standard_D2s_v3 (1)** as the VM size and under **Licensing**, choose **Windows server (2)** for the License type. Once done, click **Review + create (3)**.
 
-15. Select **Review + create** and then **Create**.
+     ![](Images/15-7-25-l4-l9.png)
+
+1. Once validation passes, review the configuration and click **Create** to deploy the Virtual Machine Scale Set.
+
+    ![](Images/15-7-25-l4-l10.png)
 
      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
      > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -84,40 +82,42 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
 
 ### Task 2: Azure auto manage
 
-In this task, you will Enable Automanage on existing machines.
+In this task, you will enable Automanage on existing machines.
 
-1. If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with below Azure credentials.
-    * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
-    * Azure Password: <inject key="AzureAdUserPassword"></inject>
+1. In the **Azure portal**, type **Automanage (1)** in the search bar and select **Automanage (2)** from the search results.
 
-2. In the search bar, search for and select **Automanage**.
+    ![](Images/15-7-25-l4-l16.png)
 
-3. From the left side panel select **Automanage machines (1)** under Machine best practices and click on **+ Enable on existing machine (2)**.
+1. In the **Automanage** page, select **Automanage machines (1)** from the left menu and click **Enable on existing machine (2)**.
+
+    ![](Images/15-7-25-l4-l11.png)
+
+1. On the **Basics** tab, under **Configuration profile**, select your profile type: **Azure Best Practices - Production (2)**.
    
-   ![](Images/upd-zero-vm-list-view.png)
-
-4. Under **Configuration profile**, select your profile type: **Azure Best Practices - Production or Azure Best Practices - Dev/Test or Custom profile** and click on **Next: Machines >**
+    ![](Images/15-7-25-l4-l13.png)
    
-   ![](Images/upd-existing-vm-quick-create.png)
-   
-   > Click **View best practice profiles** to see the differences between the environments.
+     > Click **View best practice profiles** to see the differences between the environments.
     
-   ![](Images/upd-browse-production-profile.png)
+      ![](Images/upd-browse-production-profile.png)
 
-5. On the **Select Machines** blade:
+1. On the **Enable Automanage** page, select the following details.
 
-   i. Filter the list by your Subscription and Resource group and click on **Check eligibility on machines (1)**.
+     - Filter the list by your Subscription and Resource group and click on **Check eligibility on machines (1)**.
    
-   ii. **Check the checkbox of the virtual machine (2)** you want to onboard. (for example: let's enable automanage for smarthotelweb2.)
+     - **Check the checkbox of the virtual machine (2)** you want to onboard. (for example: let's enable automanage for smarthotelweb2.)
    
-   iii. Click on the **Review + Create (3)** button.
+     - Click on the **Review + Create (3)** button.
    
-   ![](Images/updt-existing-vm-select-machine.png)
+         ![](Images/15-7-25-l4-l14.png)
 
-6. Click **Create**.
+1. On the **Review + Create** tab, verify the selected configuration and click **Create** to enable Automanage.
+
+   ![](Images/15-7-25-l4-l15.png)
 
 ### Summary 
 
 In this exercise, you focused on enhancing business resilience through the use of Azure Virtual Machine Scale Sets (VMSS). It involved creating and deploying a specialized virtual machine image, which was captured and stored in a gallery named "imagemigration." Additionally, a VM scale set called "migrationscaleset" was established to showcase Azure's scalability and business continuity capabilities. As part of this process, Automanage was enabled on existing machines to streamline management and optimize performance.
 
 Click on **Next** from the lower right corner to move on to the next page.
+
+![](Images/14-next.png)
