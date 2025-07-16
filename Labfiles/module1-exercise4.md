@@ -10,7 +10,7 @@ In this exercise, you will focus on enhancing business resilience through the us
 In this exercise, you will complete the following tasks:
 
 - Task 1: Using VM Scale Sets to Drive Business Resiliency
-- Task 2: Azure auto manage
+- Task 2: Azure Automanage
 
 ## Task 1: Using VM Scale Sets to Drive Business Resiliency
 
@@ -57,7 +57,7 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
 
    ![](Images/15-7-25-l4-l6.png)
    
-1. On the **VM image version** page, click **Create VMSS (1)** to begin creating a Virtual Machine Scale Set using this image.
+1. On the **VM image version** page, click **+ create VMSS** to begin creating a Virtual Machine Scale Set using this image.
 
     ![](Images/15-7-25-l4-l7.png)
 
@@ -80,7 +80,7 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
 
      <validation step="1dff74eb-dff7-4fd6-a103-04ff946cae88" />
 
-### Task 2: Azure auto manage
+### Task 2: Azure Automanage
 
 In this task, you will enable Automanage on existing machines.
 
