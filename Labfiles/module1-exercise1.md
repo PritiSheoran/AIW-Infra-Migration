@@ -29,19 +29,19 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
 
 1. In the Azure portal, click the **Show Portal Menu (1)** icon, then select  **All services (2)** from the left navigation pane.
  
-    ![Screenshot of the All services overview blade.](Images/Allservices1.png "All services Overview blade")
+    ![Screenshot of the All services overview blade.](Images/15-7-25-1.png "All services Overview blade")
 
 1. In the search bar at the top of the Azure portal, type **Azure Migrate (1)**, and select **Azure Migrate (2)** from the Services section.
  
-    ![Screenshot of the Azure migrate overview blade.](Images/hol1-ex-1-s3.png "Azmigrate Overview blade")
+    ![Screenshot of the Azure migrate overview blade.](Images/15-7-25-l1-1.png "Azmigrate Overview blade")
 
 1. On the **Azure Migrate** | Servers, databases and web apps page, select **Servers, databases and web apps (1)** under **Migration goals** from the left panel, and then under **Azure Migrate: Discovery and assessment**, select **Discover (2)** -> **Using appliance (3)** to open the Discover blade.
  
-    ![](Images/H1E1S4.png)
+    ![](Images/15-7-25-l1-2.png)
  
 1. On the **Discover** page, under **Are your servers virtualized?**, click the drop-down **(1)** and select **Yes, with Hyper-V (2)** from the list.
 
-    ![](Images/mod-1-ex1-s5.png)
+    ![](Images/15-7-25-l1-3.png)
 
 1. On the **Discover page**, under **1: Generate project key**, enter the name below as the appliance name **(1)**, then click **Generate key (2)** to start creating the required Azure resources.
 
@@ -60,7 +60,7 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
 
 1. As we have created the Azure Migrate project key for the Discover and Assessment, you will be accessing the Hyper-V manager in the next tasks to start the discovery process with the help of the Azure Migrate Appliance.
 
-1. On the lab VM, click the **Start (1)** button, search for **Hyper-V Manager (2)**, and select it from the results. You will use Hyper-V Manager to access your infrastructure and connect to the Azure Migrate Appliance VM to begin discovery.
+1. On the lab VM, click the **Start (1)** button, search for **Hyper-V Manager (2)**, and select  **Hyper-V Manager (3)** from the results. You will use Hyper-V Manager to access your infrastructure and connect to the Azure Migrate Appliance VM to begin discovery.
 
     > You can also open the Hyper-V Manager by clicking on the ![](Images/Icon-hyperv.png) icon in the taskbar.
 
@@ -102,7 +102,7 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the first step 'Set up prerequisites' in progress. The internet connectivity and time sync steps have been completed.](Images/15-7-25-l1-14.png)
 
-1. On the **Appliance Configuration Manager page (Cloud: Public), under 1. Set up prerequisites, expand **Check latest updates and register appliance**. Paste the **Azure Migrate project key (1)** that you copied earlier, then click **Verify (2)** to validate the key.
+1. On the **Appliance Configuration Manager Cloud: Public** page, under **1. Set up prerequisites**, expand **Check latest updates and register appliance**. Paste the **Azure Migrate project key (1)** that you copied earlier, then click **Verify (2)** to validate the key.
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project.](Images/15-7-25-l1-15.png "Register with Azure Migrate")
 
@@ -124,21 +124,23 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
 
      ![Screenshot of the Azure Migrate appliance login window, showing where to copy and paste the login code for the Azure Migrate project.](Images/15-7-25-l1-19.png "Azure Migrate Microsoft login")
 
- 1. Login using the below Azure credentials and select **Continue** on the **Are you trying to sign in to Microsoft Azure PowerShell?** window to complete the login process. Once you have logged in, return to the Azure Migrate Appliance tab, and the appliance registration will start automatically and display the below message once the registration is successful. (Log in using the provided Azure credentials. On the “Are you trying to sign in to Microsoft Azure PowerShell?” prompt, select Continue to complete the login. Once signed in, return to the Azure Migrate Appliance tab—the appliance registration will begin automatically and display The appliance has been successfully registered once complete.)
+ 1. Log in using the provided Azure credentials. On the **Are you trying to sign in to Microsoft Azure PowerShell?** prompt, select **Continue to complete the login**. 
     
-     * Azure Username/Email: <inject key="AzureAdUserEmail"></inject>
-
+     - Azure Username/Email: <inject key="AzureAdUserEmail"></inject>
+        
         ![](Images/15-7-25-l1-20.png)
        
-     * Azure Password: <inject key="AzureAdUserPassword"></inject>
+     - Azure Password: <inject key="AzureAdUserPassword"></inject>
    
         ![](Images/15-7-25-l1-21.png)
-   
+
         ![](Images/15-7-25-l1-22.png)
+       
+1. Once signed in, return to the Azure Migrate Appliance tab—the appliance registration will begin automatically and display The appliance has been successfully registered once complete.
 
-        ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project as completed.](Images/15-7-25-l1-23.png "Appliance registered")
+   ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project as completed.](Images/15-7-25-l1-23.png "Appliance registered")
 
-1. In **Step 1: Provide Hyper-V host credentials for the discovery of Hyper-V VMs** under **2. Manage credentials and discovery sources**, select **Add credentials**. Once registration is complete, navigate to the **Manage credentials and discovery sources** panel. Under **Step 1: Provide Hyper-V host credentials for discovery of Hyper-V VMs**, click **Add credentials** to proceed.
+1. Once registration is complete, navigate to the **Manage credentials and discovery sources** panel. Under **Step 1: Provide Hyper-V host credentials for discovery of Hyper-V VMs**, click **Add credentials** to proceed.
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add credentials' button.](Images/15-7-25-l1-24.png)
 
@@ -152,8 +154,8 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
 
         > **Note**: The Azure Migrate appliance may not have picked up your local keyboard mapping. Select the 'eyeball' in the password box to check that the password was entered correctly.
 
-1. In **Step 2: Provide Hyper-V host/cluster details**, click **Add discovery source** to specify the IP address or FQDN of the Hyper-V host/cluster and select the friendly name for the credentials to be used for the connection.
-
+1. In **Step 2: Provide Hyper-V host/cluster details**, click **Add discovery source** to specify the IP address or FQDN of the Hyper-V host/cluster
+   
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add discovery source' button.](Images/15-7-25-l1-26.png "Add discovery source")
 
 1. On the **Add discovery source** blade, provide the following details:
@@ -178,7 +180,7 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
     > - You can't remove a specific host from a cluster. You can only remove the entire cluster.
     > - You can add a cluster, even if there are issues with specific hosts in the cluster.
 
-1. In **Step 3: Provide server credentials to perform software inventory and agentless dependency analysis**, **Disable the slider (1)** and then select **Start discovery (2)**  to begin VM discovery from the validated Hyper-V hosts or clusters.
+1. In **Step 3: Provide server credentials to perform software inventory and agentless dependency analysis**, **Disable the slider**, and then select **Start discovery**  to begin VM discovery from the validated Hyper-V hosts or clusters.
 
    >**Note:** The discovery process may take up to 10 minutes to complete
    
