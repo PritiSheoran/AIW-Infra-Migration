@@ -31,7 +31,7 @@ In this task, you will review the environment discovered in Azure Migrate. After
 
 1. On the **Azure Migrate | Servers, databases and web apps** page, expand **Migration goals (1)** on the left menu and select **Servers, databases and web apps (2)**. Under **Azure Migrate: Discovery and assessment**, you'll see **Discovered servers: 7 (3)**. 
  
-    ![](Images/cor_1.png)
+    ![](Images/cor_1_1.png)
 
     > **Note:** We have already migrated 3 servers in the previous HOL, and now we will be migrating and modernizing the Red Hat and OSS DB in this HOL
  
@@ -55,7 +55,7 @@ In this task, you will review your on-premises Hyper-V Linux server and Open Sou
 
 1. In **Hyper-V Manager**, select the **redhat** VM **(1)**, then click **Connect (2)** from the right-hand **Actions** menu.
 
-    ![Screenshot of Hyper-V Manager showing the connect button for the Azure Migrate appliance.](Images/15-7-25-l5-l2.png "Connect to AzureMigrateAppliance")
+    ![Screenshot of Hyper-V Manager showing the connect button for the Azure Migrate appliance.](Images/cor_1_2.png "Connect to AzureMigrateAppliance")
 
 1. Log into the VM with the **Administrator password**: **<inject key="SmartHotel Admin Password" />** then click **Sign In** to access the VM. (The login screen may pick up your local keyboard mapping; use the 'eyeball' icon to check.)
 
