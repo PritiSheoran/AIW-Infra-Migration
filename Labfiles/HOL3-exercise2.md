@@ -28,7 +28,7 @@ In this exercise, you will complete the following task:
 
 1. In the **Site Recovery infrastructure** blade, expand **For Hyper-V Sites (1)** on the left menu. Click on **Hyper-V Hosts (2)**. In the list of hosts, locate your server and ensure its **Connection status** is **Connected (3)**.
 
-    ![](Images/15-7-25-l10-11.png)
+    ![](Images/15-7-25-l10-new.png)
 
 1. Go back to your **Recovery service vault page**, expand the **Protected items (1)** section on the left panel, click **Replicated Items (2)**. Click the **+ Replicate (3)** button at the top. From the dropdown menu, select **Hyper-V machines to Azure (4)**
 
