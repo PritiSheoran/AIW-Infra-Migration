@@ -64,40 +64,40 @@ In this task, you will be enabling the AAD authentication using a VM extension a
 
 In this task, you will enable Automanage on existing machines.
 
-1. If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with the below Azure credentials.
-    * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
-    * Azure Password: <inject key="AzureAdUserPassword"></inject>
+1. In the **Azure portal**, type **Automanage (1)** in the search bar and select **Automanage (2)** from the search results.
 
-2. In the search bar, search for and select **Automanage**.
+    ![](Images/15-7-25-l4-l16.png)
 
-3. Select **Automanage machines (1)** under Azure machine best practices and click on **+ Enable on existing machine (2)**.
+1. Select **Automanage machines (1)** under **Machine best practices** and click on **+ Enable on existing machine (2)**.
    
-   ![](Images/upd-zero-vm-list-view.png)
+   ![](Images/15-7-25-l8-10.png)
 
-4. Under **Configuration profile**, select your profile type: **Azure Best Practices - Production or Azure Best Practices - Dev/Test or Custom profile** and select **Next: Machines >**.
+1. On the **Basics** tab, under **Configuration profile**, select your profile type: **Azure Best Practices - Production**.
    
-   ![](Images/upd-existing-vm-quick-create.png)
+   ![](Images/15-7-25-l8-11.png)
    
    > **Note:** Click View best practice profiles to see the differences between the environments.
     
    ![](Images/upd-browse-production-profile.png)
 
-5. On the Select **Machines** blade:
+1. On the **Enable Automanage** page, select the following details.
 
-   i. Filter the list by your Subscription and Resource group and click on **Check eligibility on machines (2)**.
+     - Filter the list by your Subscription and Resource group and click on **Check eligibility on machines (1)**.
    
-   ii. Check the checkbox of **redhat (1)** virtual machine.
+     - **Check the checkbox of the redhat virtual machine (2)**
    
-   iii. Click the **Review + Create (3)** button.
+     - Click on the **Review + Create (3)** button.
    
-   ![](Images/upd-redhatautomanage.png)
+        ![](Images/15-7-25-l8-12.png)
 
-6. Click on **Create**.
+1. On the **Review + Create** tab, verify the selected configuration and click **Create** to enable Automanage. Once the Configuration profile assignment is completed successfully, it will take around **5-10 minutes** to get the Status as Conformant.
 
-7. Once the Configuration profile assignment is completed successfully, it will take around 5-10 minutes to get the Status as Conformant.
+    ![](Images/15-7-25-l8-13.png)
 
 ### Summary
 
 In this exercise, you enabled Azure Active Directory (AAD) authentication and Managed Identity on virtual machines by deploying a VM extension. Additionally, you activated Automanage on existing machines to streamline configuration and monitoring. This process simplified identity management and automated the operational tasks necessary for managing VMs efficiently in Azure, ensuring enhanced security and compliance across the cloud environment.
 
 Click on **Next** from the lower right corner to move on to the next page.
+
+![](Images/14-next.png)
