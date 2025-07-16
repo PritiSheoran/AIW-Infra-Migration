@@ -1,10 +1,9 @@
 
 # HOL2: Exercise 4: Optimizing newly Migrated Workloads and Emphasizing commonalities across all Stacks
 
+### Estimated time: 40 Minutes
 
-### Estimated time: 40 minutes
-
-In this exercise, you will enable Managed Identity feature and configure Azure Active Directory (AAD) based authentication for SSH login by deploying a VM extension on virtual machines. Additionally, you'll activate Automanage on existing machines to streamline configuration and monitoring. This process simplifies identity management and automates the operational tasks necessary for managing VMs efficiently in Azure, ensuring enhanced security and compliance across your cloud environment.
+In this exercise, you will enable the Managed Identity feature and configure Azure Active Directory (AAD) based authentication for SSH login by deploying a VM extension on virtual machines. Additionally, you'll activate Automanage on existing machines to streamline configuration and monitoring. This process simplifies identity management and automates the operational tasks necessary for managing VMs efficiently in Azure, ensuring enhanced security and compliance across your cloud environment.
 
 ## Lab objectives
 
@@ -21,39 +20,38 @@ In this task, you will be enabling the AAD authentication using a VM extension a
     
     ![](Images/upd-redhatrg.png)
     
-2. Now from the left side menu, select the **Identity** under Security.
+1. On the **redhat** virtual machine blade, expand **Security (1)** from the left-hand menu and select **Identity (2)**.
 
-    ![](Images/extenssions.png)
+   ![](Images/15-7-25-l8-1.png)
 
-3. In Identity, Under the System assigned tab, Click on the **On (1)** button under the Status tag and click on the **Save (2)** button to turn on the identity. It will take some time to complete the process and some Service principles are being created behind the process.
-
+1. In Identity, Under the **System assigned** tab, turn the **Status** to **On (1)** and select **Save (2)**.
+ 
      > **Note**: If prompted with the Enable system-assigned managed identity pop-up, click on Yes.
 
-      ![](Images/turnonidentity.png)
+     ![](Images/15-7-25-l8-2.png)
 
-      ![](Images/identityon.png)
+     ![](Images/15-7-25-l8-3.png)
+
+      > **Note:** It may take a few moments to complete the process, as background operations like creating service principals are performed automatically.
+
+      ![](Images/15-7-25-l8-4.png)
       
-4. Now, Navigate to **Extensions + applications** under Settings from the left side menu.
+1. On the **redhat** virtual machine blade, expand **Settings** and select **Extensions + applications (1)** from the left-hand menu. On the **Extensions** tab, click **+ Add (2)** to install an extension that allows you to connect using your Entra ID account.
    
-    ![](Images/extenssions1.png)
+   ![](Images/15-7-25-l8-5.png)
 
-5. On the Extension page, click on the **+ Add** button to add an extension that will help you connect to your machine using your AAD account.
+1. On the **Install an Extension** page, search for **Azure AD based SSH Login (1)** and select it. Click **Next (2)** to proceed with the extension installation.
 
-    ![](Images/addexn.png)
+    ![](Images/15-7-25-l8-l1.png)
 
-6. Once you are on the **Install an extension** page, search for **Azure AD based SSH Login** extension select it and click on the **Next** button.
+1. On the **Configure Azure AD based SSH Login Extension** page, click on **Review + create**.
 
-    ![](Images/aaadextensfd.png)
+    ![](Images/15-7-25-l8-7.png)
 
-7. You will be redirected to the **Configure Azure AD based SSH Login extension** page, now click on **Review + create** and then **Create** button. It should start the installation of the extension into your Redhat VM.
+1. On the **Review + create** tab, click **Create** to start installing the extension into your Redhat VM.
 
-    ![](Images/15-07-2024.png)
-    
-    ![](Images/extensionds.png)
+    ![](Images/15-7-25-l8-8.png)
 
-8. Once you have the extension installed, please move to the next task.
-
-    ![](Images/completed.png)
 
      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
      > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -64,9 +62,9 @@ In this task, you will be enabling the AAD authentication using a VM extension a
 
 ### Task 2: Azure auto manage
 
-In this task, you will Enable Automanage on existing machines.
+In this task, you will enable Automanage on existing machines.
 
-1. If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with below Azure credentials.
+1. If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with the below Azure credentials.
     * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
     * Azure Password: <inject key="AzureAdUserPassword"></inject>
 
