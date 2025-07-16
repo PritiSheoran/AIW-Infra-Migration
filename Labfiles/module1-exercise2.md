@@ -17,43 +17,45 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will use Azure Migrate to create a migration assessment for the SmartHotel application, using the data gathered during the discovery phase.
 
-1. Select **Assess (1)** under **Azure Migrate: Discovery and assessment** and click on **Azure VM (2)** to start a new migration assessment.
+1. On **Assessments tools**, under **Azure Migrate: Discovery and assessment**, click on **Assess** **(1)** and select **Azure VM** **(2)** from the dropdown to start a new migration assessment.
 
-    ![Screenshot of the Azure Migrate portal blade, with the '+Assess' button highlighted.](Images/15-7-25-l2-1.png "Start assessment")
+   ![Screenshot of the Azure Migrate portal blade, with the '+Assess' button highlighted.](Images/15-7-25-l2-1.png "Start assessment")
 
-2. On the Basics blade, ensure the Assessment type is **Azure VM** and the Discovery Source is **Servers discovered from Azure Migrate Appliance**. Under **Assessment settings**, select **Edit**.
+1.  On the **Basics** blade, ensure the **Assessment type** is set to **Azure VM** **(1)** and the **Discovery source** is **Servers discovered from Azure Migrate appliance** **(2)**. under **Assessment settings**, click on **Edit** **(3)**.
 
     ![Screenshot of the Azure Migrate 'Assess servers' blade, showing the assessment name.](Images/15-7-25-l2-2.png "Assess servers - assessment name")
 
-3. The **Assessment settings** blade allows you to tailor many settings used when making a migration assessment report. Take a few moments to explore the wide range of assessment properties. Hover over the information icons to see more details on each setting. Choose any settings you like, then select **Save**. (You have to make a change for the Save button to be enabled; if you don't want to make any changes, close the blade.)
+1. On the **Infrastructure settings** blade, under **Target settings**, the **Assessment settings** blade allows you to tailor many settings used when making a migration assessment report. Take a few moments to explore the wide range of assessment properties. Hover over the information icons to view more details for each setting. Choose any settings you prefer, then click **Save** to apply them.
 
-    ![](Images/15-7-25-l2-3.png)
+   > **Note**: You must make at least one change for the **Save** button to be enabled. If you don’t want to make any changes, simply close the blade.
 
-4. Select **Next** to move to the **Select servers to assess** tab and enter the following information:
+     ![](Images/15-7-25-l2-3.png)
+
+1. Click on **Next: Select servers to assess >** to proceed to the next tab.
+
      
-     1. Assessment name: Enter **SmartHotelAssessment (1)** 
-     1. Select or create a group: Choose **Create new (2)**  
-     1. Enter the Group name: **SmartHotel VMs (3)**
-     1. Add machines to the Group:  Select **SmarthotelAppl (Hyper-V) (4)** from the dropdown.
-     1. Select the **smarthotelweb1**, **smarthotelweb2**, **UbuntuWAF**, and **redhat** VMs **(5)**
-     1. Click on **Next: Review + create assessment > (6)**.
+     - Set **Assessment name** to **SmartHotelAssessment** **(1)**.
+     - Under **Select or create a group**, choose **Create new** **(2)**.
+     - Enter **Group name** as **SmartHotel VMs** **(3)**.
+     - From the **Appliance name** dropdown, select **SmartHotelAppl (Hyper-V)** **(4)**.
+     - Select the **smarthotelweb1**, **smarthotelweb2**, **UbuntuWAF**, and **redhat** VMs **(5)**
+     - Click on **Next: Review + create assessment > (6)** to continue.
 
          ![](Images/15-7-25-l2-4.png)
-        ![Screenshot of the Azure Migrate 'Assess servers' page. A new server group containing servers smarthotelweb1, smarthotelweb2, and UbuntuWAF.](Images/15-7-25-l2-5.png "Assessment VM group")
-
+       
         > **Note**: There is no need to include the **smarthotelSQL1**, **AzureMigrateAppliance** and other VMs in the assessment, since they will not be migrated to Azure.
         
         > **Note**: Please note that even though we are adding **Redhat** VM to the assessment here, we will not be setting up our environment in Redhat VM in this exercise. Users will review the assessment and perform all the steps for environment setup in HOL2.
     
-5. Click on **Create assessment** to create the assessment. 
+1. Click on **Create assessment** to create the assessment. 
 
     ![](Images/15-7-25-l2-6.png)
 
-6. In Azure Migrate, on the **Servers, databases, and web apps** blade, select **Refresh** periodically until the number of assessments shown is **1** (This may take a few minutes). Once the assessments count is updated, click on **1** that is next to **Total** under **Assessments**.  
+7. In Azure Migrate, on the **Servers, databases, and web apps** blade, select **Refresh** periodically until the number of assessments shown is **1** (This may take a few minutes). Once the assessments count is updated, click on **1** that is next to **Total** under **Assessments**.  
 
     ![Screenshot from Azure Migrate showing the number of assessments as '1'.](Images/15-7-25-l2-7.png "Azure Migrate - Assessments (count)")
     
-7. Select **Assessments (1)** under **Azure Migrate: Discovery and assessment** to see a list of assessments. Then select the **actual assessment (2)**.
+8. Select **Assessments (1)** under **Azure Migrate: Discovery and assessment** to see a list of assessments. Then select the **actual assessment (2)**.
 
     ![Screenshot showing a list of Azure Migrate assessments. There is only one assessment in the list. It has been highlighted.](Images/15-7-25-l2-8.png)
 
