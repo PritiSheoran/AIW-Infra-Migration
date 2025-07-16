@@ -144,7 +144,7 @@ In this task, you will perform a migration of the Red Hat virtual machine to Azu
    
 1. On the **Specify Intent** blade, select **Azure VM (1)** for **Where do you want to migrate to?** and click on **Continue (2)**
 
-    ![](Images/15-7-25-l7-l20.png)
+    ![](Images/cor_1_6.png)
 
 1. On the **Migrate** blade, perform the following actions:
   
