@@ -10,13 +10,13 @@ In this exercise, you will enable the Managed Identity feature and configure Azu
 In this exercise, you will complete the following tasks:
 
 - Task 1: Getting Started with Azure Active Directory for Linux
-- Task 2: Azure auto manage
+- Task 2: Azure Automanage
 
 ### Task 1: Getting Started with Azure Active Directory for Linux 
 
 In this task, you will be enabling the AAD authentication using a VM extension and enabling Managed identity. 
 
-1. In the Azure portal `https://portal.azure.com`, Navigate to your newly migrated **redhat** VM and select it.
+1. In the Azure portal `https://portal.azure.com`, Navigate to your newly migrated **Red Hat** VM and select it.
     
     ![](Images/upd-redhatrg.png)
     
@@ -24,7 +24,7 @@ In this task, you will be enabling the AAD authentication using a VM extension a
 
    ![](Images/15-7-25-l8-1.png)
 
-1. In Identity, Under the **System assigned** tab, turn the **Status** to **On (1)** and select **Save (2)**.
+1. In Identity, under the **System assigned** tab, turn the **Status** to **On (1)** and select **Save (2)**.
  
      > **Note**: If prompted with the Enable system-assigned managed identity pop-up, click on Yes.
 
@@ -60,7 +60,7 @@ In this task, you will be enabling the AAD authentication using a VM extension a
 
      <validation step="31b52d30-b336-49c3-a5bc-4ef69b15dd76" />
 
-### Task 2: Azure auto manage
+### Task 2: Azure Automanage
 
 In this task, you will enable Automanage on existing machines.
 
@@ -84,7 +84,7 @@ In this task, you will enable Automanage on existing machines.
 
      - Filter the list by your Subscription and Resource group and click on **Check eligibility on machines (1)**.
    
-     - **Check the checkbox of the redhat virtual machine (2)**
+     - **Check the checkbox of the Red Hat virtual machine (2)**
    
      - Click on the **Review + Create (3)** button.
    
