@@ -1,6 +1,6 @@
 # HOL1: Exercise 3: Migrating your applications and data by utilizing Microsoft services and tools, such as Azure Migrate: Server Migration
 
-### Estimated time: 60 minutes
+### Estimated time: 60 Minutes
 
 In this exercise, you will learn about Azure migration and how all pre-migration steps such as discovery, assessments, and right-sizing of on-premises resources are included for infrastructure, data, and applications. Azure Migrate provides a simplified migration, modernization, and optimization service for Azure.
 
@@ -14,18 +14,21 @@ In this exercise, you will complete the following tasks:
 - Task 4: Configure Networking
 - Task 5: Server migration
 
-### Task 1: Create a Storage Account
+## Task 1: Create a Storage Account
 
-In this task, you will create a new Azure Storage Account that will be used by Migration and for storage of your virtual machine data during migration.
+In this task, you will create a new Azure Storage Account that will be used by Migration and for the storage of your virtual machine data during migration.
 
 > **Note:** This lab focuses on the technical tools for workload migration, but in real-world scenarios, a comprehensive long-term plan is needed. Considerations for the landing zone should include network traffic, access control, resource organization, and governance. The CAF Migration and Foundation Blueprints can help deploy a pre-defined landing zone using Infrastructure as Code (IaC) for resource management. For more details, refer to [Azure Landing Zones](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/) and the [Cloud Adoption Framework Azure Migration landing zone Blueprint sample](https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone/).
 
-1. In the Azure portal's left navigation, select **+ Create a resource**, then search for and select **Storage account**, followed by **Create**.
+1. In the Azure portal, use the search bar at the top to search for **Storage account** **(1)**. Select **Storage accounts** **(2)** from the Services list.
 
-    ![](./15-7-25-l3-1.png)
-    ![](15-7-25-l3-2.png)
+   ![](./15-7-25-l3-1.png)
+ 
+1. On the **Storage accounts** page, click **Create** **(1)** to start creating a new storage account.
 
-3. In the **Create storage account** blade, on the **Basics** tab, use the following values:
+   ![](15-7-25-l3-2.png)
+
+1. In the **Create a storage account** page , on the **Basics** tab, enter the following values:
 
    - Subscription: **Select your Azure subscription (1)**.
   
@@ -41,101 +44,101 @@ In this task, you will create a new Azure Storage Account that will be used by M
   
    - Redundancy: **Locally-redundant storage (LRS) (7)**
 
+   - Click **Review + create** to continue **(8)**
+
      ![Screenshot of the Azure portal showing the create storage account blade.](15-7-25-l3-3.png "Storage account settings")
 
-4. Select **Review+create**, then select **Create**.
+1. On the **Review + create** tab, verify the entered details. Click **Create** to deploy the storage account.
 
     ![](15-7-25-l3-4.png)
 
-5. Once the storage account is deployed, click on **Go to resource** to open it.
+1. Once the storage account is successfully deployed, select **Go to resource** to open the newly created storage account.
 
     ![](15-7-25-l3-5.png)
 
-6. Select **Data protection** under **Data management** from the left-hand side menu of storage account.
-
-   ![Screenshot of the Azure portal showing the create storage account blade.](Images/1.3.png)
-
-7. Now, uncheck the box next to **Enable soft delete for blobs** and **Enable soft delete for containers** to disable the soft delete on blobs and containers as the soft delete enabled storage account is **not supported** for enabling replication on Virtual Machines. Click on **Save**.
-
+1. On the **Storage account** page, under **Data management**, select **Data protection** from the left-hand menu and then under the **Recovery** section, uncheck the boxes for **Enable soft delete for blobs** and **Enable soft delete for containers**, then click on **Save**.
+   
    ![](15-7-25-l3-6.png)
 
 #### Task summary 
 
 In this task, you created a new Azure Storage Account that will be used for Migration and modernization.
 
-### Task 2: Register the Hyper-V Host with Migration and modernization
+## Task 2: Register the Hyper-V Host with Migration and modernization
 
 In this task, you will register your Hyper-V host(LabVM) with the Migration and Modernization service. This service uses Azure Site Recovery as the underlying migration engine. As part of the registration process, you will deploy the Azure Site Recovery Provider on your Hyper-V host.
 
-1. Return to the **Azure Migrate | Servers, databases and web apps** blade in the Azure Portal, and select **Servers, databases and web apps (1)** under **Migration goals** on the left. Under **Migration Tools**, select **Discover (2)**.
+1. On the  **Azure Migrate | Servers, databases and web apps** page, expand **Migration goals (1)** from the left menu, then select **Servers, databases and web apps (2)**. Under **Migration tools**, click **Discover (3)**.
 
    >**Note:** You may need to add the migration tool yourself by following the link below the **Migration Tools** section, selecting **Migration and modernization**, then selecting **Add tool(s)**.
    
      ![](./15-7-25-l3-7.png)
 
-2. In the **Discover** panel, provide the following details:
+1. On the **Discover** pane, provide the following configuration:
 
-   - Under **Where do you want to migrate to?**, select **Azure VM (1)**
-   - Under **Are your machines virtualized**, select **Yes, with Hyper-V (2)**.
-   - Under **Target region (3)** make sure to select the **<inject key="Region"></inject>** region as same the Resource Group's region.
-   - Check the **Confirmation (4)** checkbox and select **Create resources (5)** to begin the deployment of the Azure Site Recovery resource used by Migration and Modernization for Hyper-V migrations.
+   - For **Where do you want to migrate to?**, select **Azure VM (1)**.
+   - For **Are your machines virtualized?**, select **Yes, with Hyper-V (2)**.
+   - For **Target region**, select **<inject key="Region"></inject>** **(3)** (make sure this matches the region of your Resource Group).
+   - Check the box to **Confirm the target region for migration (4)**.
+   - Click **Create resources (5)** to deploy the necessary Azure Site Recovery resources.
 
      ![Screenshot of the Azure portal showing the 'Discover machines' panel from Azure Migrate.](./15-7-25-l3-8.png "Discover machines - source hypervisor and target region")
 
-   Once deployment is complete, the 'Discover machines' panel should be updated with additional instructions.
+     > **Note:** Once deployment is complete, the 'Discover machines' panel should be updated with additional instructions.
   
-3. Click on the **Download** link for the Hyper-V replication provider software installer to download the Azure Site Recovery provider installer.
+1. On the **Discover** pane, under **Prepare Hyper-V host servers**, click the **Download** link to download the **Azure Site Recovery Provider** installer.
 
      ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link for the Hyper-V replication provider software installer.](./15-7-25-l3-9.png "Replication provider download link")
 
-4. Return to the **Discover** page in your browser, select the blue **Download** button and download the registration key file.
+1. Return to the **Discover** page and click the blue **Download** button to download the **registration key file**.
 
      ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](./15-7-25-l3-10.png "Download registration key file")
 
-
-5. Open the **AzureSiteRecoveryProvider.exe** installer you downloaded a moment ago. On the **Microsoft Update** tab, select **Off** and select **Next**. Accept the default installation location and select **Install**.
+1. Open the **AzureSiteRecoveryProvider.exe** installer you downloaded a moment ago. On the **Microsoft Update** tab, select **Off** and click on **Next**. On the **Installation** screen, accept the default installation location and click **Install** to begin installation.
 
     ![](./15-7-25-l3-11.png)
 
-     > **Note:** If you are prompted with a pop-up like the latest version of the Provider is installed on this server. Would you like to proceed to registration? select **Yes**. (You can directly jump to the next step in that case.)
-  
-     ![](15-7-25-l3-12.png)
+    ![](15-7-25-l3-12.png)
 
-7. When the installation has completed select **Register**. Click on **Browse (1)** to the location of the key file you downloaded. When the key is loaded select **Next (2)**.
+    > **Note:** If you are prompted with a pop-up, like the latest version of the Provider is installed on this server. Would you like to proceed to registration? select **Yes**. (You can directly jump to the next step in that case.)
+
+
+1. When the installation has completed, on the **Installation** pane, click on **Register**.
 
    ![](15-7-25-l3-13.png)
+   
+1. On the **Vault Settings** page, click **Browse (1)** to locate the registration key file you downloaded earlier. In the **Open** dialog, select the downloaded registration key file (2), then click **Open (3)**. Once the key file is loaded, click **Next (4)** to proceed with the registration process.
 
    ![](15-7-25-l3-15.png)
 
    ![](15-7-25-l3-14.png)
 
-9. Select **Connect directly to Azure Site Recovery without a proxy server (1)** and select **Next (2)**. The registration of the Hyper-V host with Azure Site Recovery will begin.
+1. On the **Proxy Settings** pane, select **Connect directly to Azure Site Recovery without a proxy server (1)**, then click **Next (2)** to proceed. This will initiate the registration of the Hyper-V host with Azure Site Recovery.
 
      ![Screenshot of the ASR provider registration settings.](15-7-25-l3-16.png)
 
-10. Wait for registration to complete (this may take several minutes). Then select **Finish**.
+1.  On the **Registration** pane, wait for the message **The server was registered in the Azure Site Recovery vault** to appear. Once registration is complete, select **Finish** to close the wizard.
 
      ![Screenshot of the ASR provider showing successful registration.](15-7-25-l3-17.png "Registration complete")
 
-11. Return to the Azure Migrate browser window. **Refresh** your browser, then re-open the **Discover machines** panel by selecting **Discover** under **Migration and modernization** and provide the following details:
+1. Return to the **Azure Migrate** browser window. Refresh the page, then under **Migration and modernization**, select **Discover** to reopen the panel.
+    
+      - Set **Where do you want to migrate to?** to **Azure VM (1)**
+      - Set **Are your machines virtualized?** to **Yes, with Hyper-V (2)**
+      - Under **Do you want to install a new replication appliance or scale-out existing setup?**, select **Install a replication appliance (3)**
+      - Select **Finalize registration (4)**
 
-   - Under **Where do you want to migrate to?**, select **Azure VM (1)**
-   - Under **Are your machines virtualized**, select **Yes, with Hyper-V (2)**.
-   - Under **Do you want to install a new replication appliance or scale out the existing setup?**, select **Install a replication appliance (3)**
+        ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](Images/30-09-2024(2).png "Finalize registration")
 
-11. Select **Finalize registration (4)**, which should now be enabled.
-
-     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](Images/30-09-2024(2).png "Finalize registration")
-
-12. Azure Migrate will now complete the registration with the Hyper-V host. **Wait** for the registration to complete. This may take several minutes.
+1. Azure Migrate will now complete the registration with the Hyper-V host. **Wait** for the registration to complete. This may take 5-10 minutes.
 
      ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Finalizing registration...' message.](Images/upd-discover-6.png "Finalizing registration...")
 
-13. Once the registration is complete, close the **Discover machines** panel using **X** button.
+1. Once registration is complete, confirm the status shows **Registration finalized (1)** under **Registered Hyper-V hosts**. Select **Close (2)** to exit the **Discover machines** panel.
 
      ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Registration finalized' message.](15-7-25-l3-18.png "Registration finalized")
 
-14. The **Migration and Modernization** panel should now show 7 discovered servers.
+1. The **Migration and Modernization** panel should now show 7 discovered servers.
 
      ![Screenshot of the 'Azure Migrate - Servers' blade showing 6 discovered servers under 'Azure Migrate: Server Migration'.](15-7-25-l3-19.png "Discovered servers")
 
