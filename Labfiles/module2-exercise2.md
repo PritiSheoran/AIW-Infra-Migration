@@ -66,6 +66,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
     ```
     wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh && sh onboard_agent.sh -w <Workspace ID> -s <Primary Key>
     ```
+    > **Note:** Be sure to replace `<Workspace ID>` and `<Primary Key>` with the actual values you copied from the Log Analytics workspace.
 
 1. Enter the following command, substituting \<Workspace ID\> with the value copied earlier:
 
