@@ -69,7 +69,7 @@ To understand if Azure makes financial sense, we will start by creating a direct
    - **Currency**: Select **US Dollar ($)**
    - Click on **Build business case**
      
-   ![](Images/H3E6S7.png)
+       ![](Images/read.png)
    
 8. Once the build has succeeded, you can start reviewing the business case that was created from the above inputs and industry benchmarks.
 
