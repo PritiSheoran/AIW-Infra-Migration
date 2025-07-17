@@ -29,7 +29,7 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
 
 1. In the Azure portal, click the **Show Portal Menu (1)** icon, then select  **All services (2)** from the left navigation pane.
  
-    ![Screenshot of the All services overview blade.](Images/15-7-25-1.png "All services Overview blade")
+    ![Screenshot of the All services overview blade.](Images/15-7-25-1l.png "All services Overview blade")
 
 1. In the search bar at the top of the Azure portal, type **Azure Migrate (1)**, and select **Azure Migrate (2)** from the Services section.
  
