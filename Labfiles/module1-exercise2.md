@@ -102,9 +102,9 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
      > **Note**: If you don't see the workspace here. You can attempt to close and reopen the Workspace, or you can try refreshing the browser page. This may have been caused by a temporary error in the portal.
 
-1. From the **Log Analytics workspace** screen: Select **Agents (1)** under **Settings** from the left-hand side menu and Expand the **Log analytics agent instructions** and make a note of the **Workspace ID (2)** and **Primary Key (3)**. You can copy them using the copy icon and paste them into Notepad for later use.
+1. From the **Log Analytics workspace** screen: Select **Agents (2)** under **Settings (1)** from the left-hand side menu and Expand the **Log analytics agent instructions** and make a note of the **Workspace ID (3)** and **Primary Key (4)**. You can copy them using the copy icon and paste them into Notepad for later use.
 
-    ![Screenshot of part of the Azure Migrate 'Dependencies' blade, showing the OMS workspace ID and key.](Images/15-7-25-l2-15.png "OMS Workspace ID and primary key")
+    ![Screenshot of part of the Azure Migrate 'Dependencies' blade, showing the OMS workspace ID and key.](Images/lab2.png "OMS Workspace ID and primary key")
 
 1. Return to the **Dependencies** screen in Azure Migrate. Then copy the download links for both agents (Windows 64-bit and Linux) and save them along with the Workspace ID and Primary Key noted earlier.
    
