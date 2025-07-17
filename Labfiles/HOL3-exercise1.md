@@ -4,7 +4,7 @@
 
 ### Estimated Duration: 30 Minutes
 
-In this HOL, you will use Azure Migrate: Discovery and assessment tool that describes how to onboard on-premises Hyper-V VMs to Azure Arc for Azure Management.
+In this HOL, you will use the Azure Migrate: Discovery and assessment tool that describes how to onboard on-premises Hyper-V VMs to Azure Arc for Azure Management.
 
 Azure Arc allows you to manage your hybrid IT estate with a single pane of glass by extending the Azure management experience to your on-premises servers, which are not ideal candidates for migration.
 
@@ -23,10 +23,6 @@ In this HOL, you will complete the following exercises:
 
 In this exercise, you will deploy and configure the Azure Connected Machine agent on a Windows machine hosted outside of Azure, to ensure that it can be managed through Azure Arc-enabled servers.
 
-1. If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with below Azure credentials.
-    * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
-    * Azure Password: <inject key="AzureAdUserPassword"></inject>
-
 1. In the search bar of the Azure portal, type **Azure arc (1)** and select **Azure Arc (2)** from suggestions under Services, as shown below:
    
     ![Screenshot of the search azure arc.](Images/15-7-25-l9-11.png "search azure arc")
@@ -39,7 +35,7 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
 
     ![Screenshot of the Generate script.](Images/15-7-25-l9-3.png "Generate script")
     
-1. In the **Basics** section, add the following details:
+1. On the **Add servers with Azure Arc** page, In the **Basics** section, add the following details:
      
    - Subscription: **Select your subscription**
     
@@ -57,11 +53,11 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
 
      ![](Images/15-7-25-l9-5.png)
 
-1. In the **Download and run script** section, click **copy (1)** icon to copy the entire script.Paste it into Notepad or your preferred text editor, as you will need it in the upcoming steps, then click on **Close (2)**.
+1. In the **Download and run script** section, click **copy (1)** icon to copy the entire script. Paste it into Notepad or your preferred text editor, as you will need it in the upcoming steps, then click on **Close (2)**.
 
     ![Screenshot of the copy script.](Images/15-7-25-l9-6.png "copy script")
     
-1. Go to the **Start (1)** button in the VM, search and select **Hyper-V Manager (2)**.
+1. Go to the **Start (1)** button in the VM, type **Hyper-V Manager** and select **Hyper-V Manager (2)**.
 
     ![Screenshot of Hyper-V Manager, with the 'Hyper-V Manager' action highlighted.](Images/upd-hyper-v-manager.png "Hyper-V Manager")
 
@@ -89,27 +85,32 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
     
 1. From the **Start (1)** menu of the AzureArcVM, search for **Windows Powershell (2)** and open it **(3)**.
 
-    ![Screenshot of the powershell.](Images/upd-powershell.png)
+    ![Screenshot of the PowerShell.](Images/upd-powershell.png)
       
-1. In PowerShell, run the below command to set the execution policy as unrestricted.
+1. In PowerShell, run the following command to set the execution policy as unrestricted.
 
     ```
     Set-ExecutionPolicy -ExecutionPolicy unrestricted
     ```
-   >**Note:** If you get an option, "Do you want to change the execution policy", please type A and press enter. 
+   >**Note:** If you get an option, "Do you want to change the execution policy?", please type A and press Enter. 
 
-1. Now, run the whole script that you copied in the notepad earlier in step 7.
+1. Now, run the whole script that you copied in Notepad earlier in **step 7**.
 
-1. After running the script, packages will be installed and then you will be directed to a pop-up browser page to log into your Azure account for authentication purposes. Use the below Azure credentials:
+1. After running the script, packages will be installed, and then you will be directed to a pop-up browser page to log into your Azure account for authentication purposes. Use the below Azure credentials:
 
-    * Azure Username/Email: **<inject key="AzureAdUserEmail"></inject>** 
-    * Azure Password: **<inject key="AzureAdUserPassword"></inject>** 
+    - Enter your Username/Email: **<inject key="AzureAdUserEmail"></inject>**  in the Sign in field. Click Next to continue.
 
-   > **Note:** Move back to the PowerShell pane and now you have connected your AzureArcVM to Azure successfully.
-   
-   >**Note**: On the Welcome to Microsoft Edge page, select  **Start without your data**, on **Stay current with your browsing data** select **Confirm and continue** and on the help for importing Google browsing data page, select the  **Continue without this data**  button. Then, proceed to select  **Confirm and start browsing**  on the next page has a context menu.
+       ![](./Images/614-7-25-g6.png)
     
-    ![Screenshot of the powershellscript.](Images/upd-package.png)
+    - Enter Password: **<inject key="AzureAdUserPassword"></inject>** and click Sign in
+
+       ![](./Images/614-7-25-g7.png)
+
+   > **Note:** Move back to the PowerShell pane, and now you have connected your AzureArcVM to Azure successfully.
+   
+   >**Note:** On the Welcome to Microsoft Edge page, select  **Start without your data**, on **Stay current with your browsing data** select **Confirm and continue**, and on the help for importing Google browsing data page, select the  **Continue without this data**  button. Then, proceed to select  **Confirm and start browsing**  on the next page has a context menu.
+    
+    ![Screenshot of the PowerShell script.](Images/upd-package.png)
      
  1. Close the AzureArcVM, navigate to **Azure Arc** page in the Azure portal, select **Machines (1)** under **Azure Arc resources** and now verify that a server is connected successfully **(2)**.
 
