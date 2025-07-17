@@ -4,7 +4,7 @@
 
 ### Estimated time: 25 Minutes
 
-In this exercise, you will deploy a Test Failover to the replicated Virtual Machine which allows you to test the sanity of the virtualized workload without interrupting your production workload or ongoing replication.
+In this exercise, you will deploy a Test Failover to the replicated Virtual Machine, which allows you to test the sanity of the virtualized workload without interrupting your production workload or ongoing replication.
 
 ## Lab objectives
 
@@ -14,7 +14,7 @@ In this exercise, you will complete the following task:
 
 ### Task 1: Setup Test Failover
 
-1. On the **Recovery Service Vault page**, click on **Replicated Items (1)** under **Protected Items** and select **AzureArcVM (2)** that you replicated in the previous exercise.
+1. On the **Recovery Service Vault page**, expand the **Protected Items (1)** and click on **Replicated Items (2)** and select **AzureArcVM (3)** that you replicated in the previous exercise.
    
     ![](Images/15-7-25-l11-1.png) 
    
@@ -34,11 +34,11 @@ In this exercise, you will complete the following task:
    
     ![](Images/15-7-25-l11-4.png) 
   
-1. In the **Search resources, services, and docs** bar, type **Virtual Machines** **(1)** and select **Virtual machines** from the suggestions **(2)**.
+1. In the **Search resources, services, and docs** bar, type **Virtual Machines** **(1)** and select **Virtual machines** from the Services **(2)**.
 
    ![](Images/15-7-25-l11-4.1.png) 
 
-1. On the **Virtual machines** page, select **AzureArcVM-test** which is automatically created after the test failover **(1)**.
+1. On the **Virtual machines** page, select **AzureArcVM-test** which is automatically created after the test failover.
 
    ![](Images/15-7-25-l11-5.png) 
   
