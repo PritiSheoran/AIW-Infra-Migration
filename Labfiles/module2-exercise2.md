@@ -49,7 +49,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
     ssh administrator@192.168.1.19
     ```
 
-1. Enter 'yes' when prompted whether to connect and enter the password **<inject key="SmartHotel Admin Password" />**.
+1. Enter 'yes' when prompted **Are you sure you want to continue connecting** and enter the password **<inject key="SmartHotel Admin Password" />**.
 
     ![Screenshot showing the command prompt with an SSH session to UbuntuWAF.](Images/upd-ssh.png "SSH session with UbuntuWAF")
 
@@ -61,14 +61,14 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
     > This gives the terminal session elevated privileges.
 
-1. Enter the following command, substituting \<Workspace ID\> and \<Primary Key\> with the values copied previously. Answer **Yes** when prompted to restart services during package upgrades without asking.  
+1. Enter the following command, substituting **\<Workspace ID\> and \<Primary Key\>** with the values copied previously. Answer **Yes** when prompted to restart services during package upgrades without asking.  
 
     ```
     wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh && sh onboard_agent.sh -w <Workspace ID> -s <Primary Key>
     ```
     > **Note:** Be sure to replace `<Workspace ID>` and `<Primary Key>` with the actual values you copied from the Log Analytics workspace.
 
-1. Enter the following command, substituting \<Workspace ID\> with the value copied earlier:
+1. Enter the following command, substituting **\<Workspace ID\>** with the value copied earlier:
 
     ```s
     /opt/microsoft/omsagent/bin/service_control restart <Workspace ID>
