@@ -7,8 +7,8 @@ In this exercise, you will learn how to enable enhanced security features by ena
 
 > **Note:** 
 > - Microsoft Defender for Cloud, Azure Sentinel, and Monitor Insights can take several hours to surface after the completion of a scan.
-> - At this point of the workshop, only a limited number of data visualizations may be populated. (So the result in the screenshots below may vary)
-> - The screenshots and information below, have been provided so that you can conceptualise the type of graphs and output that can be gleaned from a fully populated environment.
+> - At this point in the workshop, only a limited number of data visualizations may be populated. (So the result in the screenshots below may vary)
+> - The screenshots and information below have been provided so that you can conceptualise the type of graphs and output that can be gleaned from a fully populated environment.
 
 ## Lab objectives
 
@@ -22,13 +22,13 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will enable Microsoft Defender for Cloud to enhance the security of your Azure environment.
 
-1. In the **search resources, services and docs** bar, type **Microsoft Defender for Cloud** and select it from suggestions, as shown below:
+1. In the **search resources, services and docs** bar, type **Microsoft Defender for Cloud (1)** and select **Microsoft Defender for Cloud (2)** from Services list.
 
     ![](Images/15-7-25-l12-1.png)
     
     > **Note:** If you are prompted with a new upgrade pop-up, click on Skip.
     
-1. On the **Microsoft Defender for Cloud** page, click on **Environment settings (1)** under **Management** and then select the **down arrow (2)** of your subscription name. From the list select **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" /> (3)**.
+1. On the **Microsoft Defender for Cloud** page, click **Management (1)** > **Environment settings (2)**, expand the subscription with the **down arrow (3)**, then select **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" /> (4)**.
 
     ![](Images/15-7-25-l12-2.png)
      
@@ -62,7 +62,7 @@ In this task, you will create and enable Microsoft Sentinel and review the Conte
 
    ![](Images/15-7-25-l12-7.png)
     
-1. On the **News and guides (1)** window, go to the **Get started (2)** tab, and review the content. From the left pane under **Configuration**, select **Data connectors**.   
+1. On the **News and guides (1)** window, go to the **Get started (2)** tab, and review the content. From the left pane under **Configuration**, select **Data connectors (3)**.   
 
     ![Screenshot of the get started.](Images/hol3-e5-t2-s4-01.png "get started")
     
@@ -95,7 +95,7 @@ In this task, you will enable Azure Monitor to track and manage the performance 
     
 1. On the **Monitor** page, from the left pane, select **Log Analytics Workspaces (1)** present under Insights (You will see your subscription and all the workspaces in it, listed here) and click on **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" /> (2)** workspace under azuremigraterg.
 
-    ![Screenshot of the search Azure workspace Monitor.](Images/hol3-e5-t3-s2.png "Azure Monitor")
+    ![Screenshot of the search Azure workspace Monitor.](Images/15-7-l12-1.png "Azure Monitor")
 
 1. On the **Log Analytics Workspaces (1)** page, under the **Monitoring (1)** section, click on **Insights (2)**, and in the **Overview (3)** tab, you will find the following:
 
@@ -106,7 +106,7 @@ In this task, you will enable Azure Monitor to track and manage the performance 
    - The daily cap set, and how much data was already ingested on the recent day
    - Ingestion anomalies - a list of identified spikes and dips in ingestion to these tables
        
-     ![Screenshot of the search Azure workspace Monitor.](Images/upd-hol3-e5-t3-s3t.png "Azure Monitor")
+     ![Screenshot of the search Azure workspace Monitor.](Images/15-7-l12-2.png "Azure Monitor")
     
 1. On the **Usage tab**, you can see ingestion data by tables and defaults to the 5 most ingested tables in the selected time range.
    
@@ -114,11 +114,11 @@ In this task, you will enable Azure Monitor to track and manage the performance 
    - The percentage this table takes from the entire ingestion volume (during the selected time range). That helps identify the tables that affect your ingestion the most.
    - When was the last update of usage statistics regarding each table? We normally expect usage stats to refresh hourly.
    
-     ![Screenshot of the search Azure workspace Monitor.](Images/hol3-e5-t3-s4.png "Azure Monitor") 
+     ![Screenshot of the search Azure workspace Monitor.](Images/15-7-l12-3.png "Azure Monitor") 
     
 1. On the **Health tab**, you can see the workspace's health state and when it was last reported, as well as operational errors and warnings.
         
-    ![Screenshot of the search Azure workspace Monitor.](Images/hol3-e5-t3-s5.png "Azure Monitor")
+    ![Screenshot of the search Azure workspace Monitor.](Images/15-7-l12-4.png "Azure Monitor")
     
 1. On the **Agents tab**, you can see :
 
