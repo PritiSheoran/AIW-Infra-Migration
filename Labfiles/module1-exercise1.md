@@ -1,4 +1,4 @@
-# HOL1: Migrating Windows & SQL Server workloads
+# HOL1: Exercise 1: Migrating Windows & SQL Server workloads
 
 ### Estimated time: 60 Minutes
 
@@ -13,7 +13,7 @@ In this HOL, you will complete the following exercises:
 - Exercise 3: Migrating your applications and data by utilizing Microsoft services and tools, such as Azure Migrate: Server Migration
 - Exercise 4: Optimizing newly Migrated Workloads, and emphasizing commonalities across all Stacks
 
-### Exercise 1: Discovery, Assess, and Plan: Evaluate your current environment
+### Task 1: Discovery, Assess, and Plan: Evaluate your current environment
 
 In this exercise, you will deploy the Azure Migrate appliance in the on-premises Hyper-V environment. This appliance communicates with the Hyper-V server to gather configuration and performance data about your on-premises VMs and returns that data to your Azure Migrate project.
 
