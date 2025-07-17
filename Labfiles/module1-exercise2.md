@@ -31,7 +31,7 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 
      ![](Images/15-7-25-l2-3.png)
 
-1. Click on **Next: Select servers to assess >** to proceed to the next tab and On the **Select servers to assess** tab, enter the following:
+1. Click on **Next: Select servers to assess >** to proceed to the next tab, and on the **Select servers to assess** tab, enter the following:
 
      - **Assessment name**: `SmartHotelAssessment` **(1)**
      - Under **Select or create a group**, select **Create new** **(2)**
@@ -42,7 +42,7 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 
          ![](Images/15-7-25-l2-4.png)
   
-         ![](Images/15-7-25-l2-5.png)
+         ![](Images/lab2-new.png) 
        
         > **Note**: There is no need to include the **smarthotelSQL1**, **AzureMigrateAppliance** and other VMs in the assessment, since they will not be migrated to Azure.
         
@@ -106,9 +106,11 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
     ![Screenshot of part of the Azure Migrate 'Dependencies' blade, showing the OMS workspace ID and key.](Images/lab2.png "OMS Workspace ID and primary key")
 
-1. Return to the **Dependencies** screen in Azure Migrate. Then copy the download links for both agents (Windows 64-bit and Linux) and save them along with the Workspace ID and Primary Key noted earlier.
+1. On the **Dependencies** screen, under **Step 1**, right-click to copy the download links for **Windows 64-bit (1)** and **Linux** versions of the **Microsoft Monitoring Agent**, then under **Step 2**, copy the links for the **Windows 64-bit (2)** and **Linux** versions of the **Dependency Agent**, and save them along with the previously noted **Workspace ID** and **Primary Key**.
+
+   ![](./media/dependencies-agent-download-links.png)
    
-    ![Screenshot of the Azure Migrate 'Dependencies' blade with the 4 agent download links highlighted.](Images/15-7-25-l2-16.png)
+   ![Screenshot of the Azure Migrate 'Dependencies' blade with the 4 agent download links highlighted.](Images/15-7-25-l2-16.png)
 
 1. In the **Hyper-V Manager** console, from the list of virtual machines, select **smarthotelweb1** **(1)**. In the right-hand **Actions** pane, click **Connect** **(2)** to launch the VM console. 
 
@@ -240,7 +242,6 @@ In this task, you will configure the Azure Migrate dependency visualization feat
     ```
 
     ![Screenshot showing that the Dependency Agent install on Linux was successful.](Images/da-linux-done.png "Dependency Agent installation was successful")
-    
 
 1. Return to the **SmartHotel VMs** group in the **Azure Migrate** portal. Refresh the page using the **browser refresh button** (not the one in the portal UI). Verify that the **Dependency Agent** status for **smarthotelweb1**, **smarthotelweb2**, and **UbuntuWAF** shows as **Installed**. It may take up to **5 minutes** for the status to update after installation.
 
