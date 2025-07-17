@@ -56,7 +56,7 @@ In this task, you will create a new Azure Storage Account that will be used by M
 
     ![](15-7-25-l3-5.png)
 
-1. On the **Storage account** page, under **Data management**, select **Data protection** from the left-hand menu and then under the **Recovery** section, uncheck the boxes for **Enable soft delete for blobs** and **Enable soft delete for containers**, then click on **Save**.
+1. On the **Storage account** page, under **Data management (1)**, select **Data protection (2)** from the left-hand menu and then under the **Recovery** section, **uncheck** the boxes for **Enable soft delete for blobs (3)** and **Enable soft delete for containers (4)**, then click on **Save (5)**.
    
    ![](15-7-25-l3-6.png)
 
@@ -79,7 +79,7 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
    - For **Where do you want to migrate to?**, select **Azure VM (1)**.
    - For **Are your machines virtualized?**, select **Yes, with Hyper-V (2)**.
    - For **Target region**, select **<inject key="Region"></inject>** **(3)** (make sure this matches the region of your Resource Group).
-   - Check the box to **Confirm the target region for migration (4)**.
+   - Check the box to **Confirm the target region for migration is **<inject key="Region"></inject>** (4)**.
    - Click **Create resources (5)** to deploy the necessary Azure Site Recovery resources.
 
      ![Screenshot of the Azure portal showing the 'Discover machines' panel from Azure Migrate.](./15-7-25-l3-8.png "Discover machines - source hypervisor and target region")
@@ -222,7 +222,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
      ![Screenshot of the 'Azure Migrate: Server Migration' overview blade showing the replication state as 'Healthy' for 3 servers.](Images/30-09-2024(4).png "Replication summary")
 
-1. In the **Azure Migrate: Server Migration** page, expand the **Migration (1)** section in the left-hand menu and select **Replications (2)**. Select **Refresh (2)** occasionally and wait until all three machines have a **Protected (3)** status, which shows the initial replication is complete. This will take **5-10*** minutes.
+1. In the **Azure Migrate: Server Migration** page, expand the **Migration (1)** section in the left-hand menu and select **Replications (2)**. Select **Refresh (3)** occasionally and wait until all three machines have a **Protected (4)** status, which shows the initial replication is complete. This will take **5-10*** minutes.
 
      ![Screenshot of the 'Azure Migrate: Server Migration - Replicating machines' blade showing the replication status as 'Protected' for all 3 servers.](Images/15-7-25-l2-30.png "Replication status")
 
@@ -247,7 +247,7 @@ In this task, you will modify the settings for each replicated VM to use a stati
 
     ![Screenshot from the 'Azure Migrate: Server Migration - Replicating machines' blade with the smarthotelweb1 machine highlighted.](Images/15-7-25-l2-31.png "Replicating machines")
 
-1. On the left menu, expand **General (1)** and select **Compute and Network (2)**. Under the **Microsoft Azure** column, verify the **Size** is set to **F2s_v2**.
+1. On the left menu, expand **General (1)** and select **Compute and Network (2)**. Under the **Microsoft Azure** column, verify the **Size** is set to **F2s_v2** **(3)**.
 
     ![Screenshot of the smarthotelweb1 blade with the 'Compute and Network' and 'Edit' links highlighted.](Images/15-7-25-l2-32.png "Edit Compute and Network settings")
 
