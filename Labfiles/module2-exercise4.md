@@ -14,9 +14,9 @@ In this exercise, you will complete the following tasks:
 
 ### Task 1: Getting Started with Azure Active Directory for Linux 
 
-In this task, you will be enabling the AAD authentication using a VM extension and enabling Managed identity. 
+In this task, you will be enabling the AAD authentication using a VM extension and enabling Managed Identity. 
 
-1. In the Azure portal `https://portal.azure.com`, Navigate to your newly migrated **Red Hat** VM and select it.
+1. In the Azure portal `https://portal.azure.com`, navigate to your newly migrated **Red Hat** VM and select it.
     
     ![](Images/upd-redhatrg.png)
     
@@ -38,7 +38,7 @@ In this task, you will be enabling the AAD authentication using a VM extension a
       
 1. On the **redhat** virtual machine blade, expand **Settings** and select **Extensions + applications (1)** from the left-hand menu. On the **Extensions** tab, click **+ Add (2)** to install an extension that allows you to connect using your Entra ID account.
    
-   ![](Images/15-7-25-l8-5.png)
+   ![](Images/m2e4.png)
 
 1. On the **Install an Extension** page, search for **Azure AD based SSH Login (1)** and select it. Click **Next (2)** to proceed with the extension installation.
 
@@ -51,7 +51,6 @@ In this task, you will be enabling the AAD authentication using a VM extension a
 1. On the **Review + create** tab, click **Create** to start installing the extension into your Redhat VM.
 
     ![](Images/15-7-25-l8-8.png)
-
 
      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
      > - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
