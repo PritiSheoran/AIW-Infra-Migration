@@ -1,6 +1,6 @@
 # Infrastructure Migration 
 
-## Overall Estimated Duration: 7 Hours
+## Overall Estimated Duration: 8 Hours
 
 ## Overview
 
@@ -32,7 +32,7 @@ In this hands-on lab, you'll migrate and modernize workloads to Azure. You'll st
 
 The following labs provide you with a quick and easy way to get started with Azure Migrate through on-premises environments that do not require any complex setup or installations. 
 
-For the purposes of these HOLs, let’s consider that SmartHotel is a large hotel company. 
+For the purposes of these Hands-on Labs (HOLs), let’s consider that SmartHotel is a large hotel company. 
 
 Their IT systems run Windows, Linux, SQL Servers, and MySQL across on-premises data centers, distribution centers, and multiple public clouds. This poses operational challenges for SmartHotel. They’d like a consistent way to govern and operate across these disparate environments, ensure security across the entire organization, and enable innovation and developer agility, all while meeting regulatory and compliance requirements and being able to leverage the latest innovations of database technologies.
 
@@ -150,7 +150,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
      ![](Images/614-7-25-g11.png)
 
-6. From the Azure Portal Dashboard, under the Navigate section, click **Resource groups** to view all the resource groups.
+6. From the **Azure Portal** Dashboard, under the Navigate section, click **Resource groups** to view all the resource groups.
 
    ![](Images/614-7-25-g10.png)
    
