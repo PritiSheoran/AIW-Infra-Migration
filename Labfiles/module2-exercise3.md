@@ -162,7 +162,7 @@ In this task, you will perform a migration of the Red Hat virtual machine to Azu
 
 1. To monitor migration progress, expand **Migration (1)** and select **Jobs** **(2)**. Locate the **Planned failover** job for **redhat** and verify that its status shows as **In progress (3)**.
 
-    ![](Images/15-7-25-l7-l23.png)
+    ![](Images/e2lab3.png)
 
 1. Under the **Migration** section, select **Jobs** **(1)**. **Wait** until the **Planned failover** jobs show a **Status** of **Successful (2)**. You should not need to refresh your browser. This could take up to **15 minutes**.
 
