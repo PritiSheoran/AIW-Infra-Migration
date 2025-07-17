@@ -124,7 +124,7 @@ In this task, you will modify the settings for each replicated VM to use a stati
 
 1. Back in the **Compute and Network** pane, click **Save** to apply the network interface changes.
 
-    ![](Images/15-7-25-l7-l17.png)
+    ![](Images/m2e3.png)
 
 #### Task summary 
 
