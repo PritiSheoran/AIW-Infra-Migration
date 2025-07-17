@@ -102,15 +102,15 @@ In this task, you enabled replication from the Hyper-V host to Azure Migrate and
 
 In this task, you will modify the settings for each replicated VM to use a static private IP address that matches the on-premises IP addresses for that machine.
 
-1. On the **Migration and modernization - Replications** blade, select the **redhat** virtual machine to open its detailed migration and replication settings. Review the replication health, status, and other migration-related information carefully.
+1. On the **Migration and modernization | Replications** page, select the **redhat** virtual machine to open its detailed migration and replication settings. Review the replication health, status, and other migration-related information carefully.
 
    ![](Images/15-7-25-l7-l14.png)
 
-1. In the **redhat | Replicating machines** page, expand **General (1)** and select **Compute and Network (2)**. Confirm that the **Azure VM size** is set to **F2s_v2 (3)**.
+1. In the **redhat Replicating machines** page, expand **General (1)** and select **Compute and Network (2)**. Confirm that the **Azure VM size** is set to **F2s_v2 (3)**.
 
      ![](Images/15-7-25-l7-2.png)
 
-1. Under the **Target network** section, locate the **Network interfaces** field. Select the **Edit icon** next to **nic-redhat-00 (Primary)** to configure the NIC settings.
+1. On the **redhat Replicating machines** section, locate the **Network interfaces** field. Select the **Edit icon** next to **nic-redhat-00 (Primary)** to configure the NIC settings.
 
     ![](Images/15-7-25-l7-l16.png) 
 
