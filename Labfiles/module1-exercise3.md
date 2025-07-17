@@ -180,9 +180,9 @@ In this task, you will configure and enable the replication of your on-premises 
 1. On the **Target settings** tab, select the information below,
 
    - **Subscription**: Select your subscription **(1)**
-   - **Resource Group**: Select the existing **SmartHotelHostRG (2)**
+   - **Resource group**: Select the existing **SmartHotelHostRG (2)**
    - **Cache storage account**: Choose the storage account here from the drop-down that you created in task 1 **(3)**. 
-   - **Virtual Network**: Select **SmartHotelVNet (4)**. 
+   - **Virtual network**: Select **SmartHotelVNet (4)**. 
    - **Subnet**: Select **SmartHotel (5)**. 
    - Leave other values as default and select **Next (6)**.
    
@@ -194,9 +194,9 @@ In this task, you will configure and enable the replication of your on-premises 
 
         - Select the storage account **migrationstorage<inject key="DeploymentID" enableCopy="false" />**
           
-        - On the **Data Management page (1)**, choose **Object Replication (2)**
+        - click **Data Management(1)** and, choose **Object replication (2)**
           
-        - In the **Advanced Settings (3)** section , enable **cross-tenant replication (4)** and click **OK (5)**
+        - In the **Advanced Settings (3)** section , enable **Allow cross-tenant replication (4)** and click **OK (5)**
           
         ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](Images/ms-1.png)
 
@@ -222,7 +222,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
      ![Screenshot of the 'Azure Migrate: Server Migration' overview blade showing the replication state as 'Healthy' for 3 servers.](Images/30-09-2024(4).png "Replication summary")
 
-1. In the **Azure Migrate: Server Migration** page, expand the **Migration (1)** section in the left-hand menu and select **Replications (2)**. Select **Refresh (3)** occasionally and wait until all three machines have a **Protected (4)** status, which shows the initial replication is complete. This will take **5-10*** minutes.
+1. In the **Azure Migrate: Server Migration** page, expand the **Migration (1)** section in the left-hand menu and select **Replications (2)**. Select **Refresh (3)** occasionally and wait until all three machines have a **Protected (4)** status, which shows the initial replication is complete. This will take **5-10** minutes.
 
      ![Screenshot of the 'Azure Migrate: Server Migration - Replicating machines' blade showing the replication status as 'Protected' for all 3 servers.](Images/15-7-25-l2-30.png "Replication status")
 
@@ -293,17 +293,13 @@ In this *task, you will perform a migration of the UbuntuWAF, smarthotelweb1, an
 
     ![](Images/15-7-25-l2-37.png)
    
-1. On the **Migrate** page, select the 3 VMs **(1)**, choose **Yes, Shutdown virtual machines (Ensure no data loss) (2)**, and click **Migrate (3)** to start the migration.
+1. On the **Migrate** page, select the 3 VMs **(1)**, choose **Yes, Shutdown virtual machines (Ensure no data loss) (2)** under the **Shutdown virtual machines** section, and click **Migrate (3)** to start the migration.
 
     ![Screenshot of the 'Migrate' blade, with 3 machines selected and the 'Migrate' button highlighted.](Images/15-7-25-l2-38.png)
 
    > **Note**: You can optionally choose whether the on-premises virtual machines should be automatically shut down before migration to minimize data loss. Either setting will work for this lab.
 
-1. The migration process will start.
-
-    ![Screenshot showing 3 VM migration notifications.](Images/upd-migrate-3.png "Migration started notifications")
-
-1. On the **Azure Migrate: Server Migration** page, to monitor progress, expand **Manage (1)** on the left menu and select **Jobs (2)** and review the status of the three **Planned failover (3)** jobs.
+1. On the **Azure Migrate: Server Migration** page, to monitor progress, expand **Migration (1)** on the left menu and select **Jobs (2)** and review the status of the three **Planned failover (3)** jobs.
 
     ![Screenshot showing the **Jobs* link and a jobs list with 3 in-progress 'Planned failover' jobs.](Images/15-7-25-l2-39.png "Migration jobs")
 
