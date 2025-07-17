@@ -4,7 +4,7 @@ In this exercise, you'll learn how to create a business case for Azure, using a 
 
 Managing your on-premises data centres can present time-bound challenges such as expiring contracts, ageing hardware, and end-of-support software. You may also be under pressure to address cash flow challenges, add capacity, and prevent security attacks while ensuring business continuity.
 
-To understand if Azure makes financial sense, we will start by creating a directional business case with Azure Migrate. This helps you understand what the best migration strategy is for your business and how to gradually move from a capital expenditure model to an operating expenditure model where you only pay for what you use.
+To understand if Azure makes financial sense, we will start by creating a directional business case with Azure Migrate. This helps you understand what the best migration strategy is for your business and how to gradually move from a capital expenditure model to an operating expenditure model, where you only pay for what you use.
 
 **Business case analysis** is a comprehensive, easy-to-use tool that enables customers and partners to create directional business proposals to understand how Azure can bring the most value to their business.
 
@@ -20,45 +20,50 @@ To understand if Azure makes financial sense, we will start by creating a direct
 
 - Enables creating **what-if** scenarios with customizable settings and assumptions.
 
-1. log in to the Azure portal with the below Azure credentials if you are not logged in already.
+1. Log in to the Azure portal with the below Azure credentials if you are not logged in already.
 
-    * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
-    * Azure Password: <inject key="AzureAdUserPassword"></inject>
+    - Enter your Username/Email: <inject key="AzureAdUserEmail"></inject> in the Sign in field. Click Next to continue.
+      
+      ![](./Images/614-7-25-g6.png)
+      
+    - Enter Password: <inject key="AzureAdUserPassword"></inject> and click Sign in
+
+      ![](./Images/614-7-25-g7.png)
     
 
-2. Click on the **Show Portal Menu (1)** bar and select **All services (2)** in the portal's left navigation.
+1. In the Azure portal, click the **Show Portal Menu (1)** icon, then select  **All services (2)** from the left navigation pane.
  
-    ![Screenshot of the All services overview blade.](Images/Allservices1.png)
+    ![Screenshot of the All services overview blade.](Images/15-7-25-1.png "All services Overview blade")
 
-3. In the search bar, search for **Azure Migrate** and select it from the suggestions to open the Azure Migrate Overview blade, as shown below. 
+1. In the search bar at the top of the Azure portal, type **Azure Migrate (1)**, and select **Azure Migrate (2)** from the Services section.
  
-    ![Screenshot of the Azure migrate overview blade.](Images/Azmigrate.png)
+    ![Screenshot of the Azure migrate overview blade.](Images/15-7-25-l1-1.png "Azmigrate Overview blade")
 
-4. Under Migration goals select **Servers, databases and web apps**.
+1. On the **Azure Migrate** | Servers, databases and web apps page, click **Migration goals (1)** from the left panel and select **Servers, databases and web apps (2)** 
+ 
+    ![](Images/15-7-read1.png)
 
-    ![](Images/azuremigrate-1.png)
-
-5. Now, you should see the **Azure Migrate: Discovery and assessment** and **Migration and modernization** panels for the current migration project, as shown below.
+1. Now, you should see the **Azure Migrate: Discovery and assessment** and **Migration and modernization** panels for the current migration project, as shown below.
 
     ![](Images/upd-E1T1S5_1.png)
     
-    >**Note**: If you are not able to see the **Azure Migrate: Discovery and assessment** and **Migration and modernization** panels, please follow the below instructions to select the migration project.
+    >**Note**: If you are not able to see the **Azure Migrate: Discovery and assessment** and **Migration and modernization** panels, please follow the instructions below to select the migration project.
 
      - Click on **Project** and select the existing project from the list. Create a new project if you do not have any projects created previously.
 
-        ![](Images/E1T1S5_.png)
+        ![](Images/15-7-read2.png)
         
-6. Under **Azure Migrate: Discovery and assessment**, select **Build business case** to open the **Build business case** blade. 
+1. Under **Azure Migrate: Discovery and assessment**, select **Build business case** to open the **Build business case** blade. 
 
     >**Note**: Make sure you discovered your on-premises environment with the Azure Migrate agentless appliance, which collects configuration and resource utilization data for your servers and workloads.
 
-      ![](Images/H3E6S6.png)
+      ![](Images/15-7-read3a.png)
     
-7. On the **Build business case** blade, enter the following details:
+1. On the **Build business case** blade, enter the following details:
    
    - **Business case name**: Enter **Contoso (1)**
    - **Target location**: Select any available region **(2)**
-   - **Migration strategy**: Select **Azure recommended approach to minimize cost (3)**
+   - **Migration strategy**: Select the **Azure recommended approach to minimize cost (3)**
    - **Savings Option** : Select **Reserved Instance + Azure Savings Plan (4)**
    - **Discount(%) on Pay as you go**: Enter **0 (5)**
    - **Currency**: Select **US Dollar ($)**
@@ -82,7 +87,7 @@ To understand if Azure makes financial sense, we will start by creating a direct
 
      ![](Images/H3E6S11.png)
     
-12. Based on the rich data insights collected during the discovery process, on **Recommended migration strategy blade** you can observe how to effectively migrate to Azure, which underutilized servers to the right size, and which unused servers to potentially decommission.
+12. Based on the rich data insights collected during the discovery process, on the **Recommended migration strategy blade**, you can observe how to effectively migrate to Azure, which underutilized servers to the right size, and which unused servers to potentially decommission.
 
      ![](Images/H3E6S12.png)
    
@@ -96,7 +101,7 @@ To understand if Azure makes financial sense, we will start by creating a direct
 
 15. Click on **Azure PaaS** from the left navigation pane under **Business case reports**. You'll find recommendations in the PaaS reports identifying quick wins and the ideal right-sized targets for your database and application workloads.
 
-16. Given the importance of what-if scenarios and customizations in the planning process, use new settings to override default assumptions and build a business case for your migration strategy. We can present this business case to your stakeholders obtain buy-ins and know that you've taken the steps to make the right decisions for your business.
+16. Given the importance of what-if scenarios and customizations in the planning process, use new settings to override default assumptions and build a business case for your migration strategy. We can present this business case to your stakeholders, obtain buy-ins, and know that you've taken the steps to make the right decisions for your business.
      
 17. Learn more about the business case here: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/cloud-migration-business-case.
 
