@@ -14,13 +14,13 @@ In this exercise, you will complete the following task:
 
 ## Task 1: Configure ASR to on-premises infrastructure
 
-1. In the **search resources, services and docs bar**, type **Recovery services vaults**. From the dropdown results under **Services**, click on **Recovery Services vaults**.
+1. In the **search resources, services and docs bar**, type **Recovery services vaults (1)**. From the dropdown results under **Services**, click on **Recovery Services vaults (2)**.
    
     ![](Images/15-7-25-l10-1.png)
     
 1. On the Recovery services vaults, click on **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />-MigrateVault** which we have configured in the previous HOL1 task.
    
-    ![Screenshot of the create Recovery service vaults.](Images/hol3-e2-s2.png "create Recovery service vaults")
+    ![Screenshot of the Create Recovery service vaults.](Images/hol3-e2-s2.png "create Recovery service vaults")
 
 1. In the **Recovery Services vault** page, on the left panel, scroll down and click **Manage (1)** to expand the options. Under **Manage**, select **Site Recovery infrastructure (2)**.
 
@@ -58,7 +58,7 @@ In this exercise, you will complete the following task:
 
     ![](Images/15-7-25-l10-7.png)
 
-1. In the **Replication settings** tab, set the **OS type** to **Windows (1)*** for the virtual machine `AzureArcVM` and then click on **Next (2)**
+1. In the **Replication settings** tab, set the **OS type** to **Windows (1)** for the virtual machine `AzureArcVM` and then click on **Next (2)**
 
     ![](Images/15-7-25-l10-8.png)
      
@@ -70,8 +70,7 @@ In this exercise, you will complete the following task:
 
    ![](Images/15-7-25-l10-10.png)
 
-1. The replication process can take **15–20 minutes** to complete. Once the Replication is completed, the status of the replicated AzureArcVM will now become **Protected (2)**. The replication process can take **15–20 minutes**.
-
+1. The replication process can take **15–20 minutes** to complete. Once the Replication is completed, the status of the replicated AzureArcVM will now become **Protected (2)**.
    > **Note:** You might have to refresh **(1)** a couple of times.
 
       ![](Images/15-7-25-l10-11.png)
