@@ -61,7 +61,7 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
 
     ![](Images/15-7-25-l4-l7.png)
 
-1. On the **Create a virtual machine scale set (VMSS)** page, Under the Basics tab, enter the **Virtual Machine scale set name** as **migrationscaleset<inject key="DeploymentID" enableCopy="false" />**
+1. On the **Create a Virtual Machine Scale Set (VMSS)** page, Under the **Basics** tab, enter the **Virtual machine scale set name** as **migrationscaleset<inject key="DeploymentID" enableCopy="false" />**
 
     ![](Images/15-7-25-l4-l8.png)
 
@@ -84,15 +84,15 @@ In this task, you will be using Azure Virtual Machine Scale Sets (VMSS) to impro
 
 In this task, you will enable Automanage on existing machines.
 
-1. In the **Azure portal**, type **Automanage (1)** in the search bar and select **Automanage (2)** from the search results.
+1. In the **Azure portal**, type **Automanage (1)** in the search bar and select **Automanage (2)** from the Services results.
 
     ![](Images/15-7-25-l4-l16.png)
 
-1. In the **Automanage** page, select **Automanage machines (1)** from the left menu and click **Enable on existing machine (2)**.
+1. In the **Automanage** page, select **Automanage machines (1)** from the left menu under **Machine best practices** section and click **+ Enable on existing machine (2)**.
 
     ![](Images/15-7-25-l4-l11.png)
 
-1. On the **Basics** tab, under **Configuration profile**, select your profile type: **Azure Best Practices - Production**.
+1. On the **Basics** tab, under **Configuration profile**, select your profile type: **Azure best practices: Production**.
    
     ![](Images/15-7-25-l4-l13.png)
    
