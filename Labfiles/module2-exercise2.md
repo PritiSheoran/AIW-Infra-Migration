@@ -13,15 +13,15 @@ In this exercise, you will complete the following task:
 
 ### Task 1: Configure dependency visualization
 
-When migrating a workload to Azure, it is important to understand all workload dependencies. A broken dependency could mean that the application doesn't run properly in Azure, perhaps in hard-to-detect ways. Some dependencies, such as those between application tiers, are obvious. Other dependencies, such as DNS lookups, Kerberos ticket validation or certificate revocation checks, are not.
+When migrating a workload to Azure, it is important to understand all workload dependencies. A broken dependency could mean that the application doesn't run properly in Azure, perhaps in hard-to-detect ways. Some dependencies, such as those between application tiers, are obvious. Other dependencies, such as DNS lookups, Kerberos ticket validation, or certificate revocation checks, are not.
 
 In this task, you will configure the Azure Migrate dependency visualization feature. This requires you to first create a Log Analytics workspace and then deploy agents on the to-be-migrated VMs.
 
-1. Return to the **Azure Migrate | Servers, databases and web apps** page in the Azure Portal, expand **Migration goals (1)** on the left menu and select **Servers, databases and web apps (1)**. Under **Discovery and assessment** select **Groups (2)**.
+1. Return to the **Azure Migrate | Servers, databases and web apps** page in the Azure Portal, expand **Migration goals (1)** on the left menu and select **Servers, databases and web apps (2)**. Under **Discovery and assessment** select **Groups (2)**.
 
     ![](Images/15-7-25-l6-1.png)   
 
-1. Under the **Groups (1)** pane, select the **SmartHotel VMs (2)** group to see the group details.  On the **Azure Migrate: Discovery and assessment | Groups** page, expand **Manage (1)**, select **Groups (1)** from the left menu. Then click on the **SmartHotel VMs (2)** group to view the group details. 
+1. On the **Azure Migrate: Discovery and assessment | Groups** page, expand **Manage (1)**, select **Groups (2)** from the left menu. Then click on the **SmartHotel VMs (3)** group to view the group details. 
 
     ![](Images/15-7-25-l6-2.png)  
 
