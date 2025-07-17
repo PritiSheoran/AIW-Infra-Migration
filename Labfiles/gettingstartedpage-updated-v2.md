@@ -144,17 +144,19 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
 4. If you see the pop-up **Stay Signed in?**, click **No**.
 
-   ![](./Images/614-7-25-g8.1.png)
+   ![](./Images/14-7-25-g8.1.png)
 
 5. If a **Welcome to Microsoft Azure** pop-up window appears, click **Cancel** to skip the tour.
 
+     ![](Images/614-7-25-g11.png)
+
 6. From the Azure Portal Dashboard, under the Navigate section, click **Resource groups** to view all the resource groups.
 
-   ![](Images/select-rg.png "Resource groups")
+   ![](Images/614-7-25-g10.png)
    
 7. On the **Resource groups** page in the Azure portal, confirm you have all resource groups present as shown below.
 
-   ![](Images/614-7-25-g9.png "Resource groups")
+   ![](Images/614-7-25-g9.png)
 
 ## Support Contact
 
@@ -165,7 +167,7 @@ Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Now, click on Next from the lower right corner to move on to the next page.
+Now, click on **Next** from the lower right corner to move on to the next page.
 
 ![](Images/14-next.png)
 
