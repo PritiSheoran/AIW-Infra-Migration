@@ -162,7 +162,7 @@ In this exercise, you will deploy the Azure Migrate appliance in the on-premises
      
       - Select **Add single item (1)**
       - IP Address / FQDN:  Enter **HOSTVMS<inject key="DeploymentID" enableCopy="false" /> (2)** 
-      - Friendly name: Select **hostlogin (3)** from the dropdown and 
+      - Map credentials: Select **hostlogin (3)** from the dropdown and 
       - Select **Save (4)**.
 
         ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add discovery source' panel.](Images/15-7-25-l1-27.png "Discovery source - SmartHotelHost")
