@@ -19,11 +19,11 @@ In this exercise, you will review the already discovered server on your Azure Mi
 
 ## Task 1: Review the already discovered and assessed environment in Azure migrate
 
-In this task, you will review the environment discovered in Azure Migrate. After logging into the Azure portal, we'll go to All Services and search for Azure Migrate. In the overview, you will see that seven servers have been discovered and we will focus on migrating and modernizing the Red Hat and Open Source Database (OSS DB) servers.
+In this task, you will review the environment discovered in Azure Migrate. After logging into the Azure portal, we'll go to All Services and search for Azure Migrate. In the overview, you will see that seven servers have been discovered, and we will focus on migrating and modernizing the Red Hat and Open Source Database (OSS DB) servers.
 
 1. In the Azure portal, click the **Show Portal Menu (1)** icon, then select  **All services (2)** from the left navigation pane.
  
-    ![Screenshot of the All services overview blade.](Images/15-7-25-1.png "All services Overview blade")
+    ![Screenshot of the All services overview blade.](Images/15-7-25-1l.png "All services Overview blade")
 
 1. In the search bar, type **Azure Migrate (1)** and select **Azure Migrate (2)** from the suggestions to open.
    
