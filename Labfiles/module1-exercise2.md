@@ -106,9 +106,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
     ![Screenshot of part of the Azure Migrate 'Dependencies' blade, showing the OMS workspace ID and key.](Images/lab2.png "OMS Workspace ID and primary key")
 
-1. On the **Dependencies** screen, under **Step 1**, right-click to copy the download links for **Windows 64-bit (1)** and **Linux** versions of the **Microsoft Monitoring Agent**, then under **Step 2**, copy the links for the **Windows 64-bit (2)** and **Linux** versions of the **Dependency Agent**, and save them along with the previously noted **Workspace ID** and **Primary Key**.
-
-   ![](./media/dependencies-agent-download-links.png)
+1. On the **Dependencies** screen, under **Step 1**, right-click to copy the download links for **Windows 64-bit** and **Linux** versions of the **Microsoft Monitoring Agent (1)**, then under **Step 2**, copy the links for the **Windows 64-bit** and **Linux** versions of the **Dependency Agent (2)**, and save them along with the previously noted **Workspace ID** and **Primary Key** .
    
    ![Screenshot of the Azure Migrate 'Dependencies' blade with the 4 agent download links highlighted.](Images/15-7-25-l2-16.png)
 
