@@ -1,10 +1,10 @@
 # Infrastructure Migration 
 
-### Overall Estimated Duration: 7 Hours
+## Overall Estimated Duration: 8 Hours
 
 ## Overview
 
-In this hands-on lab, you'll migrate and modernize workloads to Azure. You'll start by evaluating and migrating Windows and SQL Server workloads using Azure Migrate and Azure Site Recovery. Next, you'll replicate and migrate a Red Hat VM and OSS DB workloads, enable Entra ID-based authentication and connecting to Azure Automanage. Finally, you'll manage a Windows machine with Azure Arc, using Azure Site Recovery for disaster recovery, including test failovers and failovers to Azure VMs.
+In this hands-on lab, you'll migrate and modernize workloads to Azure. You'll start by evaluating and migrating Windows and SQL Server workloads using Azure Migrate and Azure Site Recovery. Next, you'll replicate and migrate a Red Hat VM and OSS DB workloads, enable Entra ID-based authentication, and connect to Azure Automanage. Finally, you'll manage a Windows machine with Azure Arc, using Azure Site Recovery for disaster recovery, including test failovers and failovers to Azure VMs.
 
 ### Key Features of Infrastructure Migration to Azure
 
@@ -30,9 +30,9 @@ In this hands-on lab, you'll migrate and modernize workloads to Azure. You'll st
 
 ## Hands-on Labs Scenario
 
-The following labs provide you with a quick and easy way to get started with Azure Migrate through on-premises environments that do not require any complex set-up or installations. 
+The following labs provide you with a quick and easy way to get started with Azure Migrate through on-premises environments that do not require any complex setup or installations. 
 
-For the purposes of these HOLs, let’s consider that SmartHotel is a large hotel company. 
+For the purposes of these Hands-on Labs (HOLs), let’s consider that SmartHotel is a large hotel company. 
 
 Their IT systems run Windows, Linux, SQL Servers, and MySQL across on-premises data centers, distribution centers, and multiple public clouds. This poses operational challenges for SmartHotel. They’d like a consistent way to govern and operate across these disparate environments, ensure security across the entire organization, and enable innovation and developer agility, all while meeting regulatory and compliance requirements and being able to leverage the latest innovations of database technologies.
 
@@ -48,7 +48,7 @@ Their IT systems run Windows, Linux, SQL Servers, and MySQL across on-premises d
 
 - **Disaster Recovery and Security:** Implement disaster recovery plans with Azure Site Recovery, conduct test failovers, and enable failovers to Azure VMs. Enhance security with Microsoft Defender for Cloud, Microsoft Sentinel, and Azure Monitor. 
 
-- **Business Case Analysis:** Perfom business case analysis to ensure compliance and optimize resource management for Azure Services.
+- **Business Case Analysis:** Perform business case analysis to ensure compliance and optimize resource management for Azure Services.
 
 ## Pre-requisites
 
@@ -76,7 +76,7 @@ The architecture diagram outlines a series of labs focused on migrating workload
 
 - **Microsoft Defender for Cloud**: A security management tool that provides visibility and protection for workloads running in Azure, on-premises, and other cloud platforms. It helps detect threats, manage security posture, and ensure compliance.  
 
-- **Microsoft Sentinel**: A cloud-native security information and event management (SIEM) and security orchestration automated response (SOAR) solution that aggregates security data, detects threats, and enables incident response through playbooks and analytics.  
+- **Microsoft Sentinel**: A cloud-native security information and event management (SIEM) and security orchestration, automated response (SOAR) solution that aggregates security data, detects threats, and enables incident response through playbooks and analytics.  
 
 - **Azure Monitor**: A service that collects, analyzes, and acts on telemetry data from Azure resources, on-premises environments, and other clouds, providing insights into the performance and health of applications and infrastructure.  
 
@@ -88,15 +88,15 @@ The architecture diagram outlines a series of labs focused on migrating workload
 
 ## Getting Started with the Lab
 
-Ensure you have access to all required tools, account and carefully read each task and follow the steps in sequence. Refer to screenshots and tips provided for guidance throughout the lab.
+Welcome to Infrastructure Migration. Ensure you have access to all required tools, accounts, and carefully read each task and follow the steps in sequence. Refer to the screenshots and tips provided for guidance throughout the lab.
 
 ## **Accessing Your Lab Environment**
  
-Once you're ready to dive in, your virtual machine and **Lab Guide** will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-   ![](./Images/GS6.png)
+![](./Images/14-7-25-g1.png)
 
-### **Virtual Machine & Lab Guide**
+## **Virtual Machine & Lab Guide**
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
  
@@ -104,57 +104,59 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment Details** tab.
 
-   ![](./Images/GS12.png)
+   ![](./Images/14-7-25-g2.png)
  
 ## **Utilizing the Split Window Feature**
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-   ![](./Images/GS8.png)
+   ![](./Images/14-7-25-g3.png)
  
 ## **Managing Your Virtual Machine**
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-  ![](./Images/GS5.png)
+  ![](./Images/14-7-25-g4.png)
+
+## Lab Guide Zoom In/Zoom Out
+
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+![](./Images/14-7-25-g5.png) 
 
 ## **Let's Get Started with Azure Portal**
  
-1. On your virtual machine, click on the Azure Portal icon as shown below:
+1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
-    ![](./Images/GS1.png)
+    ![](./Images/614-7-25-g5.1.png)
  
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-      ![](./Images/GS2.png)
+      ![](./Images/614-7-25-g6.png)
  
 3. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-      ![](./Images/GS3.png)
+      ![](./Images/614-7-25-g7.png)
  
 4. If you see the pop-up **Stay Signed in?**, click **No**.
 
-   ![](./Images/GS9.png)
+   ![](./Images/14-7-25-g8.1.png)
 
-5. If you see the pop-up **You have free Entra ADvisor recommendations!**, close the window to continue the lab.
+5. If a **Welcome to Microsoft Azure** pop-up window appears, click **Cancel** to skip the tour.
 
-6. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
+     ![](Images/614-7-25-g11.png)
 
-7. Now you will see the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
+6. From the **Azure Portal** Dashboard, under the Navigate section, click **Resource groups** to view all the resource groups.
 
-     ![](Images/select-rg.png "Resource groups")
+   ![](Images/614-7-25-g10.png)
    
-8. Confirm you have all resource groups present as shown below.
+7. On the **Resource groups** page in the Azure portal, confirm you have all resource groups present as shown below.
 
-     ![](Images/upimage10.png "Resource groups")
-   
-9. Now, click on the **Next** from the lower right corner to move to the next page.
-
-   ![](./Images/GS4.png)
+   ![](Images/614-7-25-g9.png)
 
 ## Support Contact
 
@@ -165,6 +167,8 @@ Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Now, click on Next from the lower right corner to move on to the next page.
+Now, click on **Next** from the lower right corner to move on to the next page.
+
+![](Images/14-next.png)
 
 ## Happy Learning!!
