@@ -202,4 +202,4 @@ In this exercise, you explored an Azure Migrate project and the default built-in
 
 Click on **Next >>** from the lower right corner to move on to the next page.
 
-![](Images/14-next.png)
+![](Images/infra-s7.png)
