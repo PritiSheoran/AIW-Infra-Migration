@@ -177,3 +177,5 @@ In this task, you will perform a migration of the Red Hat virtual machine to Azu
 In this exercise, you reviewed the registered Hyper-V host, LabVM, with the Migration and Modernization Service, using Azure Site Recovery for migration. The Azure Site Recovery Provider was previously deployed on the Hyper-V host. You configured and enabled replication of the on-premises virtual machine to the Azure Migrate Server Migration service, adjusting settings for each replicated VM to use static private IP addresses matching their on-premises counterparts. Finally, you migrated the Red Hat virtual machine to Azure, ensuring a seamless transition to the cloud.
 
 Click on **Next** from the lower right corner to move on to the next page.
+
+![](Images/infra-s7.png)

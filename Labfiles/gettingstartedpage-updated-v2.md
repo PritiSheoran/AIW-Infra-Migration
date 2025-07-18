@@ -128,35 +128,35 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
 1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
-    ![](./Images/614-7-25-g5.1.png)
+    ![](./Images/infra-new1.png)
  
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-      ![](./Images/614-7-25-g6.png)
+      ![](./Images/infra-s1.png)
  
 3. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-      ![](./Images/614-7-25-g7.png)
+      ![](./Images/infra-s2.png)
  
 4. If you see the pop-up **Stay Signed in?**, click **No**.
 
-   ![](./Images/14-7-25-g8.1.png)
+   ![](./Images/infra-s3.png)
 
 5. If a **Welcome to Microsoft Azure** pop-up window appears, click **Cancel** to skip the tour.
 
-     ![](Images/614-7-25-g11.png)
+     ![](Images/infra-s4.png)
 
 6. From the **Azure Portal** Dashboard, under the Navigate section, click **Resource groups** to view all the resource groups.
 
-   ![](Images/614-7-25-g10.png)
+   ![](Images/infra-s5.png)
    
 7. On the **Resource groups** page in the Azure portal, confirm you have all resource groups present as shown below.
 
-   ![](Images/614-7-25-g9.png)
+   ![](Images/infra-s6.png)
 
 ## Support Contact
 
@@ -169,6 +169,6 @@ Learner Support Contacts:
 
 Now, click on **Next** from the lower right corner to move on to the next page.
 
-![](Images/14-next.png)
+![](Images/infra-s7.png)
 
 ## Happy Learning!!

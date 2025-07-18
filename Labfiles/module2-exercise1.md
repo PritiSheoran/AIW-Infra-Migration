@@ -73,4 +73,4 @@ In this exercise, you explored how Assessments work to migrate your on-premises 
 
 Click on **Next** from the lower right corner to move on to the next page.
 
-![](Images/14-next.png)
+![](Images/infra-s7.png)
