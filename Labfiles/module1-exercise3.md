@@ -328,4 +328,4 @@ In this exercise, you created an Azure Storage Account for VM data migration. Th
 
 Click on **Next** from the lower right corner to move on to the next page.
 
-![](Images/14-next.png)
+![](Images/infra-s7.png)
