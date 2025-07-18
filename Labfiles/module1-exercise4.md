@@ -120,4 +120,4 @@ In this exercise, you focused on enhancing business resilience through the use o
 
 Click on **Next** from the lower right corner to move on to the next page.
 
-![](Images/14-next.png)
+![](Images/infra-s7.png)
